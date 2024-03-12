@@ -22,6 +22,9 @@ namespace WebEnterprise_1640.Models
         public FacultyModel Faculty { get; set; }
 
         [Required]
+        public string Description { get; set; }
+
+        [Required]
         [ForeignKey("Semesters")]
         public int SemesterId { get; set; }
         public SemesterModel Semester { get; set; }

@@ -1,5 +1,4 @@
-﻿
-@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @*@using static WebEnterprise_1640.Models.ArticleModel;*@
 @model WebEnterprise_1640.Models.ArticleModel;
 
@@ -14,6 +13,7 @@
           justify-content: flex-start;
           letter-spacing: normal;
         ">
+
     <header style="
             align-self: stretch;
             background-color: #fff;
@@ -215,7 +215,7 @@
                         line-height: 140%;
                         font-weight: 800;
                       ">
-                                @ViewBag.Magazines.Name
+                                Magazine title:
                             </div>
                         </div>
                     </div>
@@ -244,7 +244,7 @@
                         display: inline-block;
                         max-width: 100%;
                       ">
-                                Tech Terrain: Navigating the Digital Landscape
+                                @ViewBag.Magazines.Name
                             </div>
                         </div>
                     </div>
@@ -366,7 +366,6 @@
                     box-sizing: border-box;
                   ">
                         <div style="
-                      width: 1292px;
                       display: flex;
                       flex-direction: column;
                       align-items: flex-start;
@@ -385,7 +384,7 @@
                             </div>
                         </div>
                     </div>
-                   
+
                     <div style="
                     width: 204px;
                     display: flex;
@@ -395,7 +394,6 @@
                     color: #000;
                   ">
                         <div style="
-                      width: 1062px;
                       display: flex;
                       flex-direction: column;
                       align-items: flex-start;
@@ -405,7 +403,6 @@
                       flex-shrink: 0;
                     ">
                             <div style="
-                        width: 1292px;
                         position: relative;
                         line-height: 150%;
                         white-space: pre-wrap;
@@ -413,7 +410,7 @@
                         max-width: 122%;
                         flex-shrink: 0;
                       ">
-                                Mar-15-2024 11:00 AM
+                                @ViewBag.TimeStart
                             </div>
                         </div>
                     </div>
@@ -451,7 +448,6 @@
                   ">
                         <div style="
                       height: 42px;
-                      width: 1292px;
                       display: flex;
                       flex-direction: column;
                       align-items: flex-start;
@@ -471,7 +467,6 @@
                         </div>
                     </div>
                     <div style="
-                    width: 242px;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
@@ -479,7 +474,6 @@
                     color: #000;
                   ">
                         <div style="
-                      width: 1054px;
                       display: flex;
                       flex-direction: column;
                       align-items: flex-start;
@@ -489,16 +483,17 @@
                       flex-shrink: 0;
                     ">
                             <div style="
-                        width: 1292px;
                         position: relative;
                         line-height: 150%;
                         white-space: pre-wrap;
                         display: inline-block;
                         max-width: 123%;
                         flex-shrink: 0;
+
                       ">
-                                Mar-20-2024 11:59 PM
+                                @ViewBag.TimeEnd   Mar-20-2024 11:59 PM
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -520,6 +515,7 @@
             "
               asp-controller="ArticleModel" asp-action="Create" class="form-horizontal row-border" method="post" enctype="multipart/form-data">
             >
+            <input asp-for="MagazineId" type="hidden" name="MagazineId" class="form-control" id="translate_title" value="@ViewBag.Magazines.Id" placeholder="Tech Terrain: Navigating the Digital Landscape">
             <div style="
                 width: 1314px;
                 height: 826px;
@@ -529,7 +525,7 @@
                 display: none;
                 max-width: 100%;
               "></div>
-            <div style="
+            <i style="
                 align-self: stretch;
                 display: flex;
                 flex-direction: column;
@@ -554,7 +550,7 @@
                 ">
                     Title:
                 </h2>
-                <div style="
+                <input asp-for="Name" name="Name" class="form-control" id="translate_title" name="Name" type="text" style="
                   align-self: stretch;
                   border-radius: 10px;
                   background-color: #fff;
@@ -566,7 +562,7 @@
                   padding: 7px 16px;
                   z-index: 1;
                 ">
-                    <div style="
+                <div style="
                     position: relative;
                     font-size: 18px;
                     line-height: 150%;
@@ -574,12 +570,9 @@
                     color: #000;
                     text-align: left;
                   ">
-                        Tech Terrain: Navigating the Digital Landscape
-                        @*tiêu đề *@
-                        <input asp-for="Name" name="Name" class="form-control" id="translate_title" name="Name" type="text" placeholder="Tech Terrain: Navigating the Digital Landscape">
-                    </div>
+                    @*tiêu đề *@
                 </div>
-            </div>
+            </i>
             <div style="
                 align-self: stretch;
                 display: flex;
@@ -608,7 +601,7 @@
                 ">
                     Description:
                 </h2>
-                <div style="
+                <input asp-for="Description" class="form-control" id="translate_urlredirect" name="Description" style="
                   align-self: stretch;
                   border-radius: 10px;
                   background-color: #fff;
@@ -623,7 +616,7 @@
                   flex-shrink: 0;
                   z-index: 1;
                 ">
-                    <h3 style="
+                <h3 style="
                     margin: 0;
                     flex: 1;
                     position: relative;
@@ -636,84 +629,16 @@
                     display: inline-block;
                     max-width: 100%;
                   ">
-                        <input asp-for="Description" class="form-control" id="translate_urlredirect" name="Description" placeholder="Trỏ hướng" type="text">
-                    </h3>
-                </div>
+                </h3>
+
             </div>
-            <div style="
-                align-self: stretch;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: flex-start;
-                padding: 0px 0px 18px;
-                box-sizing: border-box;
-                gap: 7.5px 0px;
-                max-width: 100%;
-              ">
-                <h2 style="
-                  margin: 0;
-                  align-self: stretch;
-                  height: 42.9px;
-                  position: relative;
-                  font-size: 24px;
-                  line-height: 140%;
-                  font-weight: 700;
-                  font-family: Roboto;
-                  color: #000;
-                  text-align: left;
-                  display: inline-block;
-                  flex-shrink: 0;
-                  z-index: 1;
-                ">
-                    Submit your file:
-                </h2>
-                <div style="
-                  align-self: stretch;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: flex-start;
-                  justify-content: flex-start;
-                  padding: 0px 0px 5.5px;
-                  box-sizing: border-box;
-                  max-width: 100%;
-                ">
-                    <div style="
-                    flex: 1;
-                    border-radius: 10px;
-                    background-color: #fff;
-                    border: 1px solid #545454;
-                    box-sizing: border-box;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    padding: 16.300000000000182px 8px;
-                    gap: 0px 4px;
-                    max-width: 100%;
-                    z-index: 1;
-                  ">
-                        <div style="
-                      height: 33px;
-                      display: flex;
-                      flex-direction: row;
-                      align-items: flex-end;
-                      justify-content: flex-start;
-                      padding: 0px 12px 0px 0px;
-                      box-sizing: border-box;
-                    ">
-                            <div style="
-                        border-radius: 3px;
-                        background-color: #d9d9d9;
-                        border: 0px solid #000;
-                        display: flex;
-                        flex-direction: row;
-                        align-items: flex-start;
-                        justify-content: flex-start;
-                        padding: 5px 23px;
-                        white-space: nowrap;
-                        z-index: 1;
-                      ">
+            <div style=" align-self: stretch; display: flex; flex-direction: column;align-items: flex-start;justify-content: flex-start; padding: 0px 0px 18px; box-sizing: border-box;gap: 7.5px 0px; max-width: 100%; ">
+                <h2 style=" margin: 0;align-self: stretch;height: 42.9px;position: relative;font-size: 24px;line-height: 140%;font-weight: 700;font-family: Roboto;color: #000; text-align: left;display: inline-block; flex-shrink: 0;z-index: 1;">
+                    Submit your file: </h2>
+                <div style="align-self: stretch;display: flex; flex-direction: row; align-items: flex-start;justify-content: flex-start;padding: 0px 0px 5.5px;box-sizing: border-box;max-width: 100%;">
+                    <div style=" flex: 1;border-radius: 10px;background-color: #fff;border: 1px solid #545454;box-sizing: border-box;display: flex;flex-direction: row;align-items: flex-start;justify-content: flex-start;padding: 16.300000000000182px 8px; gap: 0px 4px; max-width: 100%;z-index: 1;">
+                        <div style=" height: 33px;display: flex;flex-direction: row;align-items: flex-end;justify-content: flex-start; padding: 0px 12px 0px 0px; box-sizing: border-box;">
+                     @*       <div style=" border-radius: 3px; background-color: #d9d9d9;border: 0px solid #000;display: flex;flex-direction: row;align-items: flex-start;justify-content: flex-start;padding: 5px 23px;white-space: nowrap; z-index: 1; ">
                                 <img style="
                           height: 34px;
                           width: 126px;
@@ -722,7 +647,7 @@
                           display: none;
                         " alt="" src="./public/rectangle-7.svg" />
 
-                                <div style="
+                                <div id="getfile" style="
                           position: relative;
                           font-size: 16px;
                           line-height: 150%;
@@ -733,7 +658,8 @@
                         ">
                                     Choose file
                                 </div>
-                            </div>
+                           
+                            </div>*@
                         </div>
                         <div style="
                       display: flex;
@@ -750,7 +676,7 @@
                         color: #000;
                         text-align: left;
                       ">
-                                No file choosen
+                                <input style="color:black" type="file" />
                             </div>
                         </div>
                     </div>
@@ -772,48 +698,39 @@
                 ">
                     Submit image:
                 </h2>
-                <div style="
-                  align-self: stretch;
-                  border-radius: 10px;
-                  background-color: #fff;
-                  border: 1px solid #545454;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: flex-start;
-                  justify-content: flex-start;
-                  padding: 16.300000000000182px 8px;
-                  gap: 0px 4px;
-                  z-index: 1;
-                ">
-                    <div style="
-                    height: 33px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-end;
-                    justify-content: flex-start;
-                    padding: 0px 12px 0px 0px;
-                    box-sizing: border-box;
-                  ">
+                <div style="align-self: stretch;display: flex; flex-direction: row; align-items: flex-start;justify-content: flex-start;padding: 0px 0px 5.5px;box-sizing: border-box;max-width: 100%;">
+                    <div style=" flex: 1;border-radius: 10px;background-color: #fff;border: 1px solid #545454;box-sizing: border-box;display: flex;flex-direction: row;align-items: flex-start;justify-content: flex-start;padding: 16.300000000000182px 8px; gap: 0px 4px; max-width: 100%;z-index: 1;">
+                        <div style=" height: 33px;display: flex;flex-direction: row;align-items: flex-end;justify-content: flex-start; padding: 0px 12px 0px 0px; box-sizing: border-box;">
+                            @*       <div style=" border-radius: 3px; background-color: #d9d9d9;border: 0px solid #000;display: flex;flex-direction: row;align-items: flex-start;justify-content: flex-start;padding: 5px 23px;white-space: nowrap; z-index: 1; ">
+                            <img style="
+                            height: 34px;
+                            width: 126px;
+                            position: relative;
+                            border-radius: 3px;
+                            display: none;
+                            " alt="" src="./public/rectangle-7.svg" />
+
+                            <div id="getfile" style="
+                            position: relative;
+                            font-size: 16px;
+                            line-height: 150%;
+                            font-family: Roboto;
+                            color: #000;
+                            text-align: left;
+                            z-index: 2;
+                            ">
+                            Choose file
+                            </div>
+
+                            </div>*@
+                        </div>
                         <div style="
-                      border-radius: 3px;
-                      background-color: #d9d9d9;
-                      border: 0px solid #000;
                       display: flex;
-                      flex-direction: row;
+                      flex-direction: column;
                       align-items: flex-start;
                       justify-content: flex-start;
-                      padding: 5px 23px;
-                      white-space: nowrap;
-                      z-index: 1;
+                      padding: 4.5px 0px 0px;
                     ">
-                            <img style="
-                        height: 34px;
-                        width: 126px;
-                        position: relative;
-                        border-radius: 3px;
-                        display: none;
-                      " alt="" src="./public/rectangle-7.svg" />
-
                             <div style="
                         position: relative;
                         font-size: 16px;
@@ -821,143 +738,13 @@
                         font-family: Roboto;
                         color: #000;
                         text-align: left;
-                        z-index: 2;
                       ">
-                                Choose file
+                                <input style="color:black" type="file" />
                             </div>
                         </div>
                     </div>
-                    <div style="
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    padding: 4.5px 0px 0px;
-                  ">
-                        <div style="
-                      position: relative;
-                      font-size: 16px;
-                      line-height: 150%;
-                      font-family: Roboto;
-                      color: #000;
-                      text-align: left;
-                    ">
-                            No file choosen
-                        </div>
-                    </div>
                 </div>
-            </div>
-            <div style="
-                width: 346px;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: flex-start;
-                gap: 17px 0px;
-                max-width: 100%;
-              ">
-                <div style="
-                  align-self: stretch;
-                  display: flex;
-                  flex-direction: row;
-                  flex-wrap: wrap;
-                  align-items: flex-start;
-                  justify-content: flex-start;
-                  gap: 0px 13px;
-                ">
-                    <div style="
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    padding: 3px 0px 0px;
-                  ">
-                        <input style="
-                      margin: 0;
-                      width: 26px;
-                      height: 27px;
-                      position: relative;
-                      border-radius: 3px;
-                      border: 1px solid #000;
-                      box-sizing: border-box;
-                      z-index: 1;
-                    " type="checkbox" />
-                    </div>
-                    <div style="
-                    flex: 1;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    min-width: 200px;
-                    row-gap: 20px;
-                  ">
-                        <div style="
-                      height: 33px;
-                      position: relative;
-                      font-size: 16px;
-                      line-height: 150%;
-                      font-family: Roboto;
-                      color: #000;
-                      text-align: left;
-                      display: flex;
-                      align-items: center;
-                      z-index: 1;
-                    ">
-                            I agree to the
-                        </div>
-                        <div style="
-                      height: 33px;
-                      flex: 1;
-                      position: relative;
-                      font-size: 16px;
-                      line-height: 150%;
-                      font-family: Roboto;
-                      color: #1367e6;
-                      text-align: left;
-                      display: flex;
-                      align-items: center;
-                      min-width: 120px;
-                      z-index: 1;
-                      margin-left: -4px;
-                    ">
-                            terms and conditions
-                        </div>
-                    </div>
-                </div>
-                <button type="submit" style="
-                  cursor: pointer;
-                  border: none;
-                  padding: 6px 0px 8.5px 21px;
-                  background-color: #4644a0;
-                  width: 91px;
-                  border-radius: 10px;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: flex-start;
-                  justify-content: flex-end;
-                  box-sizing: border-box;
-                  z-index: 1;
-                ">
-                    <div style="
-                    height: 41.5px;
-                    width: 91px;
-                    position: relative;
-                    border-radius: 10px;
-                    background-color: #4644a0;
-                    display: none;
-                  "></div>
-                    <b style="
-                    flex: 1;
-                    position: relative;
-                    font-size: 16px;
-                    line-height: 150%;
-                    font-family: Roboto;
-                    color: #fff;
-                    text-align: left;
-                    z-index: 1;
-                  ">Submit</b>
-                </button>
+
             </div>
         </form>
     </section>
@@ -1347,3 +1134,15 @@
         </div>
     </footer>
 </div>
+<script>
+    function checkbox() {
+        var a = document.getElementById("btnSubmit").style.display;
+        if (a == "none") {
+            document.getElementById("btnSubmit").style.display = "flex";
+        }
+        else {
+            document.getElementById("btnSubmit").style.display = "none";
+        }
+
+    }
+</script>

@@ -1,0 +1,226 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebEnterprise_1640</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebEnterprise_1640.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="student-magazine">
+        <div class="navbar-3">
+            <div class="container">
+                <div class="ddsgnr-library">
+                    <div class="ddsgnr-library1">
+                        <b class="bee-magazine">BEE MAGAZINE</b>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="tech-terrain">
+                        <div class="home">Home</div>
+                    </div>
+                    <button class="tech-terrain1">
+                        <div class="upload">Upload</div>
+                    </button>
+                </div>
+                <div class="column1">
+                    <div class="hi-ed">Hi, Ed</div>
+                    <div class="column2">
+                        <div class="button">
+                            <div class="button1">Log out</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section class="blog-42">
+            <header class="frame-search-bar">
+                <div class="frame-divider">
+                    <div class="search">
+                        <div class="panel"></div>
+                        <img class="icon-search"
+                             alt=""
+                             src="./public/icon-search@2x.png" />
+                    </div>
+                </div>
+                <div class="title">
+                    <div class="section-title">
+                        <h1 class="latest-magazines">Latest Magazines</h1>
+                    </div>
+                </div>
+            </header>
+            <div class="row">
+                @foreach (var item in ViewBag.Manazines)
+                {
+                    <a style="display:contents ; color:unset" href="@Url.Action("GetbyId","ArticleModel", new {id = @item.Id})">
+                        <div class="card">
+                            <div class="content">
+                                <div class="title1">
+                                    <h3 class="innovate-it-pioneering">
+                                        @item.Name
+                                    </h3>
+                                    <div class="innovate-it-celebrates">
+                                        @item.Description
+                                    </div>
+                                    <div class="deadline-to-submit-container">
+                                        <ul class="deadline-to-submit-mar-15-202">
+                                            <li>
+                                                <b class="deadline-to-submit">Deadline to submit</b>
+                                                <span>: Mar-15-2024 11:00 AM</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="final-deadline-mar-20-2024-container">
+                                        <ul class="final-deadline-mar-20-2024-1">
+                                            <li>
+                                                @foreach (var day in ViewBag.Semeter)
+                                                {
+                                                    if (item.SemesterId == day.Id)
+                                                    {
+                                                        <b class="final-deadline">Final deadline:</b>
+                                                        <span>@day.FinalClosureDate</span>
+                                                    }
+
+                                                }
+
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                }
+            </div>
+            <div class="section-title1">
+                <h1 class="magazines-have-been">Magazines have been closed</h1>
+            </div>
+            <div class="row1">
+                @foreach (var item2 in ViewBag.Manazine2)
+                {
+                    <a style="display:contents ; color:unset" href="@Url.Action("GetbyId","ArticleModel", new {id = @item2.Id})">
+                        <div class="card">
+                            <div class="content">
+                                <div class="title1">
+                                    <h3 class="innovate-it-pioneering">
+                                        @item2.Name
+                                    </h3>
+                                    <div class="innovate-it-celebrates">
+                                        @item2.Description
+                                    </div>
+                                    <div class="deadline-to-submit-container">
+                                        <ul class="deadline-to-submit-mar-15-202">
+                                            <li>
+                                                <b class="deadline-to-submit">Deadline to submit</b>
+                                                <span>: Mar-15-2024 11:00 AM</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="final-deadline-mar-20-2024-container">
+                                        <ul class="final-deadline-mar-20-2024-1">
+                                            <li>
+                                                <b class="final-deadline">Final deadline:</b>
+                                                <span> Mar-20-2024 11:00 PM</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                }
+            </div>
+        </section>
+        <footer class="footer-3">
+            <div class="content5">
+                <div class="newsletter">
+                    <div class="ddsgnr-library2">
+                        <div class="ddsgnr-library3">
+                            <b class="comp1640">COMP1640</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="links">
+                    <div class="column3">
+                        <div class="about-us">About Us</div>
+                        <div class="footer-links">
+                            <div class="link">
+                                <div class="popular">Popular</div>
+                            </div>
+                            <div class="link1">
+                                <div class="trending">Trending</div>
+                            </div>
+                            <div class="link2">
+                                <div class="contact">Contact</div>
+                            </div>
+                            <div class="link3">
+                                <div class="supporthelp">Support/Help</div>
+                            </div>
+                            <div class="link4">
+                                <div class="request-topics">Request Topics</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column4">
+                        <div class="follow-us">Follow Us</div>
+                        <div class="social-links">
+                            <div class="link5">
+                                <img class="icon-facebook"
+                                     loading="lazy"
+                                     alt=""
+                                     src="./public/icon--facebook.svg" />
+
+                                <div class="facebook">Facebook</div>
+                            </div>
+                            <div class="link6">
+                                <img class="icon-instagram"
+                                     loading="lazy"
+                                     alt=""
+                                     src="./public/icon--instagram.svg" />
+
+                                <div class="instagram">Instagram</div>
+                            </div>
+                            <div class="link7">
+                                <img class="icon-twitter"
+                                     loading="lazy"
+                                     alt=""
+                                     src="./public/icon--twitter.svg" />
+
+                                <div class="twitter">Twitter</div>
+                            </div>
+                            <div class="link8">
+                                <img class="icon-linkedin"
+                                     loading="lazy"
+                                     alt=""
+                                     src="./public/icon--linkedin.svg" />
+
+                                <div class="linkedin">LinkedIn</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="link-twitter">
+                <div class="divider"></div>
+                <div class="row2">
+                    <div class="comp1640-all-right">
+                        2024 COMP1640. All right reserved.
+                    </div>
+                    <div class="privacy-policy-terms-cookies-s">
+                        <div class="privacy-policy">Privacy Policy</div>
+                        <div class="terms-of-service">Terms of Service</div>
+                        <div class="cookies-settings">Cookies Settings</div>
+                    </div>
+                </div>
+            </div>
+
+
+</body>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+</html>

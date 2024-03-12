@@ -22,9 +22,49 @@ namespace WebEnterprise_1640.Areas.Identity.Pages.ArticleModel
         {
             return View();
         }
-        [Route("Identity/[controller]/[action]")]
-        public IActionResult CreateArticle()
+        [Route("[controller]/[action]")]
+        public IActionResult GetbyId(int id)
         {
+            var magazines = _context.Magazines.FirstOrDefault(x => x.Id == id);
+            var timeEnd = _context.Semesters.FirstOrDefault(x => x.Id == magazines.SemesterId);
+            ViewBag.Magazines = magazines;
+            ViewBag.TimeStart = magazines.ClosureDate.ToString("yyyy/MM/dd");
+            ViewBag.TimeEnd = timeEnd.FinalClosureDate.ToString("yyyy/MM/dd");
+            var daynow = DateTime.UtcNow.Date;
+
+            int year = int.Parse(ViewBag.TimeEnd.Split("/")[0]);
+            var month = int.Parse(ViewBag.TimeEnd.Split("/")[1]);
+            var day = int.Parse(ViewBag.TimeEnd.Split("/")[2]);
+            DateTime dayEnd = new DateTime(year, month, day);
+            ViewBag.Deadline = DateTime.Compare(daynow, dayEnd);
+
+            var check = _context.Articles.FirstOrDefault(x => x.MagazineId == magazines.Id);
+            if(check!= null && check.Status == "Submit")
+            {
+                var map = new ArticleViewModel();
+                map.Id = check.Id;  
+                map.UserId = check.UserId;
+                map.Name = check.Name;
+                map.Description = check.Description;
+                map.Status = check.Status;
+                map.MagazineId = magazines.Id;
+                map.TimeEnd = timeEnd.FinalClosureDate.ToString("yyyy/MM/dd");
+                map.TimeStart  = magazines.ClosureDate.ToString("yyyy/MM/dd");
+                map.TimeSubmit = check.SubmitDate.ToString("yyyy/MM/dd");
+                return RedirectToAction("SubmitArticle","ArticleModel", map);
+            }
+            else
+            {
+                return View();
+            }
+          
+        }
+        [Route("Identity/[controller]/[action]")]
+        public IActionResult CreateArticle(int id)
+        {
+            var magazines = _context.Magazines.FirstOrDefault(x => x.Id == id);
+
+            ViewBag.Magazines = magazines;
             return View();
         }
         public string CreateCookie(string cookieValue)
@@ -48,24 +88,57 @@ namespace WebEnterprise_1640.Areas.Identity.Pages.ArticleModel
         public async Task<IActionResult> Create(Models.ArticleModel input)
         {
             var userId = CreateCookie("1");
-
             input.UserId = "1";
-            input.Status = "true";
-            //var document = new DocumentModel();
-            //document.Id = input.Id;
-            //document.Image = "dsadasd";
-            //document.File = "sadasd";
-            //input.Magazine = new MagazineModel();
-            //input.Documents.Add(document);
-            input.MagazineId = 8;
+            input.Status = "Submit";
             _context.Articles.Add(input);
-           await _context.SaveChangesAsync();
-
-            return RedirectToAction("CreateArticle","ArticleMode");
+            await _context.SaveChangesAsync();
+            var lastArticle = _context.Articles.ToList().Last();
+            var document = new DocumentModel();
+            document.File = "test";
+            document.Image = "test";
+            document.ArticleId = lastArticle.Id;
+            _context.Documents.Add(document);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("SubmitArticle", "ArticleModel", input);
         }
-        public void CreateDocument(string cookieValue)
+        [Route("[controller]/[action]")]
+        public IActionResult SubmitArticle(ArticleViewModel input)
         {
-
+            var file = _context.Documents.FirstOrDefault(x => x.ArticleId == input.Id);
+            ViewBag.Articles = input;
+            ViewBag.File = file;
+            return View();
+        }
+        [Route("[controller]/[action]")]
+        public IActionResult Edit(int id)
+        {
+            var data = _context.Articles.FirstOrDefault(x => x.Id == id);
+            var model = new Models.ArticleModel();
+            model = data;
+            var file = _context.Documents.FirstOrDefault(x => x.ArticleId == id);
+            ViewBag.File = file;
+            return View("Edit",model);
+        }
+        [Route("[controller]/[action]")]
+        public async Task<IActionResult> EditData(Models.ArticleModel input)
+        {
+            var data = _context.Articles.FirstOrDefault(x => x.Id == input.Id);
+            data.Name = input.Name;
+            data.Description = input.Description;
+            _context.Articles.Update(data);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("SubmitArticle", "ArticleModel", data);
+        }
+        [Route("[controller]/[action]")]
+        public async Task<IActionResult> DeleteView(int id)
+        {
+            var data = _context.Articles.FirstOrDefault(x => x.Id == id);
+            var file = _context.Documents.FirstOrDefault(i => i.ArticleId == data.Id);
+            _context.Documents.Remove(file);
+            await _context.SaveChangesAsync();
+            _context.Articles.Remove(data);
+            await _context.SaveChangesAsync();
+            return RedirectToAction( "Index" ,"Magazines");
         }
     }
 }

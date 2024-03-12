@@ -18,5 +18,15 @@ namespace WebEnterprise_1640.Models
 
         [NotMapped]
         public List<MagazineModel> Magazines { get; set; }
+
+        
+    }
+    public class SemesterModelView
+    {
+
+        public int Id { get; set; }
+        public string FinalClosureDate { get; set; }
+
+
     }
 }

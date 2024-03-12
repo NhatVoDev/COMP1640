@@ -38,27 +38,12 @@ namespace WebEnterprise_1640.Models
         [NotMapped]
         public List<DocumentModel> Documents { get; set; }
     }
-    public class ArticleViewModel
+    public class ArticleViewModel : ArticleModel
     {
-        [Key]
-        public int Id { get; set; }
+        public string TimeStart { get; set; }
 
-        [Required]
-        public string Name { get; set; }
+        public string TimeEnd{ get; set; }
 
-        [Required]
-        [DataType(DataType.Date)]
-        public DateTime SubmitDate { get; set; }
-
-        [Required]
-        public string Description { get; set; }
-
-        [Required]
-        public string Status { get; set; }
-
-        [Required]
-        public string UserId { get; set; }
-
-        public int MagazineId { get; set; }
+        public string TimeSubmit { get; set; }
     }
 }
