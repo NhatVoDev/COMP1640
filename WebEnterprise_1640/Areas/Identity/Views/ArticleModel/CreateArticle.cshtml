@@ -1,0 +1,1349 @@
+﻿
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@*@using static WebEnterprise_1640.Models.ArticleModel;*@
+@model WebEnterprise_1640.Models.ArticleModel;
+
+
+
+<div style="
+          width: 100%;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: flex-start;
+          letter-spacing: normal;
+        ">
+    <header style="
+            align-self: stretch;
+            background-color: #fff;
+            box-shadow: 0px -1px 0px #000 inset;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 64px;
+            text-align: left;
+            font-size: 16px;
+            color: #000;
+            font-family: Roboto;
+          ">
+        <div style="
+              align-self: stretch;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              gap: 20px;
+            ">
+            <div style="
+                height: 89px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                padding: 20px 0px;
+                box-sizing: border-box;
+                font-size: 25.1px;
+                font-family: Inter;
+              ">
+                <div style="
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+                ">
+                    <b style="position: relative; white-space: nowrap">BEE MAGAZINE</b>
+                </div>
+            </div>
+            <div style="
+                width: 167px;
+                overflow: hidden;
+                flex-shrink: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 0px 32px;
+              ">
+                <div style="
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                  padding: 10px;
+                ">
+                    <div style="position: relative; line-height: 150%">Home</div>
+                </div>
+                <button style="
+                  cursor: pointer;
+                  border: none;
+                  padding: 10px;
+                  background-color: transparent;
+                  border-bottom: 1px solid #000;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                ">
+                    <div style="
+                    position: relative;
+                    font-size: 16px;
+                    line-height: 150%;
+                    font-family: Roboto;
+                    color: #000;
+                    text-align: left;
+                  ">
+                        Upload
+                    </div>
+                </button>
+            </div>
+            <div style="
+                width: 245px;
+                background-color: #fff;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                gap: 0px 32px;
+                text-align: center;
+              ">
+                <div style="
+                  height: 36px;
+                  flex: 1;
+                  position: relative;
+                  line-height: 150%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  white-space: nowrap;
+                ">
+                    Hi, Ed
+                </div>
+                <div style="
+                  width: 94px;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: center;
+                  text-align: left;
+                ">
+                    <div style="
+                    flex: 1;
+                    border-radius: 5px;
+                    border: 1px solid #000;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 8px 19px;
+                    white-space: nowrap;
+                  ">
+                        <div style="position: relative; line-height: 150%">Log out</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section style="
+            align-self: stretch;
+            background-color: #fff;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 112px 62px 67px 64px;
+            box-sizing: border-box;
+            gap: 50px 0px;
+            max-width: 100%;
+            text-align: left;
+            font-size: 24px;
+            color: #0053d8;
+            font-family: Roboto;
+          ">
+        <div style="
+              width: 1312px;
+              overflow-x: auto;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: flex-start;
+              max-width: 100%;
+            ">
+            <div style="
+                width: 1312px;
+                background-color: #fff;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+              ">
+                <div style="
+                  flex: 1;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: flex-start;
+                  padding: 0px 10px;
+                  box-sizing: border-box;
+                  gap: 0px 24px;
+                  min-height: 52px;
+                  max-width: 100%;
+                ">
+                    <div style="
+                    width: 204px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                  ">
+                        <div style="
+                      width: 1292px;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      min-height: 42px;
+                      max-width: 633%;
+                      flex-shrink: 0;
+                    ">
+                            <div style="
+                        align-self: stretch;
+                        position: relative;
+                        line-height: 140%;
+                        font-weight: 800;
+                      ">
+                                Magazine title:
+                            </div>
+                        </div>
+                    </div>
+                    <div style="
+                    width: 204px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    color: #000;
+                  ">
+                        <div style="
+                      width: 1292px;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      min-height: 42px;
+                      max-width: 633%;
+                      flex-shrink: 0;
+                    ">
+                            <div style="
+                        width: 1051px;
+                        position: relative;
+                        line-height: 140%;
+                        display: inline-block;
+                        max-width: 100%;
+                      ">
+                                Tech Terrain: Navigating the Digital Landscape
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="
+                width: 1312px;
+                background-color: #fff;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+              ">
+                <div style="
+                  flex: 1;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: flex-start;
+                  padding: 0px 16px 0px 10px;
+                  box-sizing: border-box;
+                  gap: 0px 24px;
+                  min-height: 52px;
+                  max-width: 100%;
+                ">
+                    <div style="
+                    width: 252px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                  ">
+                        <div style="
+                      width: 1292px;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      min-height: 42px;
+                      max-width: 513%;
+                      flex-shrink: 0;
+                    ">
+                            <h2 style="
+                        margin: 0;
+                        align-self: stretch;
+                        position: relative;
+                        font-size: inherit;
+                        line-height: 140%;
+                        font-weight: 800;
+                        font-family: inherit;
+                      ">
+                                Magazine description:
+                            </h2>
+                        </div>
+                    </div>
+                    <div style="
+                    flex: 1;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    min-width: 656px;
+                    max-width: 100%;
+                    color: #000;
+                  ">
+                        <div style="
+                      flex: 1;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      min-height: 42px;
+                      max-width: 100%;
+                    ">
+                            <h2 style="
+                        margin: 0;
+                        align-self: stretch;
+                        position: relative;
+                        font-size: inherit;
+                        line-height: 150%;
+                        font-weight: 400;
+                        font-family: inherit;
+                      ">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Suspendisse varius enim in eros.
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="
+                width: 1312px;
+                background-color: #fff;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+              ">
+                <div style="
+                  flex: 1;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: flex-start;
+                  padding: 0px 10px;
+                  box-sizing: border-box;
+                  gap: 0px 24px;
+                  min-height: 52px;
+                  max-width: 100%;
+                ">
+                    <div style="
+                    height: 63px;
+                    width: 1292px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding: 10px 0px;
+                    box-sizing: border-box;
+                  ">
+                        <div style="
+                      width: 1292px;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      min-height: 42px;
+                      max-width: 633%;
+                      flex-shrink: 0;
+                    ">
+                            <div style="
+                        align-self: stretch;
+                        position: relative;
+                        line-height: 140%;
+                        font-weight: 800;
+                      ">
+                                Deadline to submit:
+                            </div>
+                        </div>
+                    </div>
+                   
+                    <div style="
+                    width: 204px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    color: #000;
+                  ">
+                        <div style="
+                      width: 1062px;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      min-height: 42px;
+                      max-width: 521%;
+                      flex-shrink: 0;
+                    ">
+                            <div style="
+                        width: 1292px;
+                        position: relative;
+                        line-height: 150%;
+                        white-space: pre-wrap;
+                        display: inline-block;
+                        max-width: 122%;
+                        flex-shrink: 0;
+                      ">
+                                Mar-15-2024 11:00 AM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="
+                width: 1312px;
+                background-color: #fff;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-start;
+              ">
+                <div style="
+                  flex: 1;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: flex-start;
+                  padding: 0px 10px;
+                  box-sizing: border-box;
+                  gap: 0px 24px;
+                  min-height: 52px;
+                  max-width: 100%;
+                ">
+                    <div style="
+                    height: 62px;
+                    width: 1292px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding: 10px 0px;
+                    box-sizing: border-box;
+                  ">
+                        <div style="
+                      height: 42px;
+                      width: 1292px;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      max-width: 726%;
+                      flex-shrink: 0;
+                    ">
+                            <div style="
+                        width: 190px;
+                        position: relative;
+                        line-height: 140%;
+                        font-weight: 800;
+                        display: inline-block;
+                      ">
+                                Final deadline:
+                            </div>
+                        </div>
+                    </div>
+                    <div style="
+                    width: 242px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: flex-start;
+                    color: #000;
+                  ">
+                        <div style="
+                      width: 1054px;
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      min-height: 42px;
+                      max-width: 436%;
+                      flex-shrink: 0;
+                    ">
+                            <div style="
+                        width: 1292px;
+                        position: relative;
+                        line-height: 150%;
+                        white-space: pre-wrap;
+                        display: inline-block;
+                        max-width: 123%;
+                        flex-shrink: 0;
+                      ">
+                                Mar-20-2024 11:59 PM
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form style="
+              margin: 0;
+              align-self: stretch;
+              border-radius: 10px;
+              background-color: #e6e6e6;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: flex-start;
+              padding: 48px 59px 46.5px 41px;
+              box-sizing: border-box;
+              gap: 22px;
+              max-width: 100%;
+            "
+              asp-controller="ArticleModel" asp-action="Create" class="form-horizontal row-border" method="post" enctype="multipart/form-data">
+            >
+            <div style="
+                width: 1314px;
+                height: 826px;
+                position: relative;
+                border-radius: 10px;
+                background-color: #e6e6e6;
+                display: none;
+                max-width: 100%;
+              "></div>
+            <div style="
+                align-self: stretch;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 7.1px 0px;
+              ">
+                <h2 style="
+                  margin: 0;
+                  align-self: stretch;
+                  height: 42.9px;
+                  position: relative;
+                  font-size: 24px;
+                  line-height: 140%;
+                  font-weight: 700;
+                  font-family: Roboto;
+                  color: #000;
+                  text-align: left;
+                  display: inline-block;
+                  flex-shrink: 0;
+                  z-index: 1;
+                ">
+                    Title:
+                </h2>
+                <div style="
+                  align-self: stretch;
+                  border-radius: 10px;
+                  background-color: #fff;
+                  border: 1px solid #545454;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                  padding: 7px 16px;
+                  z-index: 1;
+                ">
+                    <div style="
+                    position: relative;
+                    font-size: 18px;
+                    line-height: 150%;
+                    font-family: Roboto;
+                    color: #000;
+                    text-align: left;
+                  ">
+                        Tech Terrain: Navigating the Digital Landscape
+                        @*tiêu đề *@
+                        <input asp-for="Name" name="Name" class="form-control" id="translate_title" name="Name" type="text" placeholder="Tech Terrain: Navigating the Digital Landscape">
+                    </div>
+                </div>
+            </div>
+            <div style="
+                align-self: stretch;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 0px 0px 18px;
+                box-sizing: border-box;
+                gap: 7.1px 0px;
+                max-width: 100%;
+              ">
+                <h2 style="
+                  margin: 0;
+                  align-self: stretch;
+                  height: 42.9px;
+                  position: relative;
+                  font-size: 24px;
+                  line-height: 140%;
+                  font-weight: 700;
+                  font-family: Roboto;
+                  color: #000;
+                  text-align: left;
+                  display: inline-block;
+                  flex-shrink: 0;
+                  z-index: 1;
+                ">
+                    Description:
+                </h2>
+                <div style="
+                  align-self: stretch;
+                  border-radius: 10px;
+                  background-color: #fff;
+                  border: 1px solid #545454;
+                  box-sizing: border-box;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                  padding: 13px 14px 19px 15px;
+                  max-width: 100%;
+                  flex-shrink: 0;
+                  z-index: 1;
+                ">
+                    <h3 style="
+                    margin: 0;
+                    flex: 1;
+                    position: relative;
+                    font-size: 20px;
+                    line-height: 150%;
+                    font-weight: 400;
+                    font-family: Roboto;
+                    color: #000;
+                    text-align: left;
+                    display: inline-block;
+                    max-width: 100%;
+                  ">
+                        <input asp-for="Description" class="form-control" id="translate_urlredirect" name="Description" placeholder="Trỏ hướng" type="text">
+                    </h3>
+                </div>
+            </div>
+            <div style="
+                align-self: stretch;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 0px 0px 18px;
+                box-sizing: border-box;
+                gap: 7.5px 0px;
+                max-width: 100%;
+              ">
+                <h2 style="
+                  margin: 0;
+                  align-self: stretch;
+                  height: 42.9px;
+                  position: relative;
+                  font-size: 24px;
+                  line-height: 140%;
+                  font-weight: 700;
+                  font-family: Roboto;
+                  color: #000;
+                  text-align: left;
+                  display: inline-block;
+                  flex-shrink: 0;
+                  z-index: 1;
+                ">
+                    Submit your file:
+                </h2>
+                <div style="
+                  align-self: stretch;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                  padding: 0px 0px 5.5px;
+                  box-sizing: border-box;
+                  max-width: 100%;
+                ">
+                    <div style="
+                    flex: 1;
+                    border-radius: 10px;
+                    background-color: #fff;
+                    border: 1px solid #545454;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    padding: 16.300000000000182px 8px;
+                    gap: 0px 4px;
+                    max-width: 100%;
+                    z-index: 1;
+                  ">
+                        <div style="
+                      height: 33px;
+                      display: flex;
+                      flex-direction: row;
+                      align-items: flex-end;
+                      justify-content: flex-start;
+                      padding: 0px 12px 0px 0px;
+                      box-sizing: border-box;
+                    ">
+                            <div style="
+                        border-radius: 3px;
+                        background-color: #d9d9d9;
+                        border: 0px solid #000;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: flex-start;
+                        justify-content: flex-start;
+                        padding: 5px 23px;
+                        white-space: nowrap;
+                        z-index: 1;
+                      ">
+                                <img style="
+                          height: 34px;
+                          width: 126px;
+                          position: relative;
+                          border-radius: 3px;
+                          display: none;
+                        " alt="" src="./public/rectangle-7.svg" />
+
+                                <div style="
+                          position: relative;
+                          font-size: 16px;
+                          line-height: 150%;
+                          font-family: Roboto;
+                          color: #000;
+                          text-align: left;
+                          z-index: 2;
+                        ">
+                                    Choose file
+                                </div>
+                            </div>
+                        </div>
+                        <div style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      padding: 4.5px 0px 0px;
+                    ">
+                            <div style="
+                        position: relative;
+                        font-size: 16px;
+                        line-height: 150%;
+                        font-family: Roboto;
+                        color: #000;
+                        text-align: left;
+                      ">
+                                No file choosen
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2 style="
+                  margin: 0;
+                  align-self: stretch;
+                  height: 42.9px;
+                  position: relative;
+                  font-size: 24px;
+                  line-height: 140%;
+                  font-weight: 700;
+                  font-family: Roboto;
+                  color: #000;
+                  text-align: left;
+                  display: inline-block;
+                  flex-shrink: 0;
+                  z-index: 1;
+                ">
+                    Submit image:
+                </h2>
+                <div style="
+                  align-self: stretch;
+                  border-radius: 10px;
+                  background-color: #fff;
+                  border: 1px solid #545454;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                  padding: 16.300000000000182px 8px;
+                  gap: 0px 4px;
+                  z-index: 1;
+                ">
+                    <div style="
+                    height: 33px;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-end;
+                    justify-content: flex-start;
+                    padding: 0px 12px 0px 0px;
+                    box-sizing: border-box;
+                  ">
+                        <div style="
+                      border-radius: 3px;
+                      background-color: #d9d9d9;
+                      border: 0px solid #000;
+                      display: flex;
+                      flex-direction: row;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      padding: 5px 23px;
+                      white-space: nowrap;
+                      z-index: 1;
+                    ">
+                            <img style="
+                        height: 34px;
+                        width: 126px;
+                        position: relative;
+                        border-radius: 3px;
+                        display: none;
+                      " alt="" src="./public/rectangle-7.svg" />
+
+                            <div style="
+                        position: relative;
+                        font-size: 16px;
+                        line-height: 150%;
+                        font-family: Roboto;
+                        color: #000;
+                        text-align: left;
+                        z-index: 2;
+                      ">
+                                Choose file
+                            </div>
+                        </div>
+                    </div>
+                    <div style="
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    padding: 4.5px 0px 0px;
+                  ">
+                        <div style="
+                      position: relative;
+                      font-size: 16px;
+                      line-height: 150%;
+                      font-family: Roboto;
+                      color: #000;
+                      text-align: left;
+                    ">
+                            No file choosen
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="
+                width: 346px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 17px 0px;
+                max-width: 100%;
+              ">
+                <div style="
+                  align-self: stretch;
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: wrap;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                  gap: 0px 13px;
+                ">
+                    <div style="
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    padding: 3px 0px 0px;
+                  ">
+                        <input style="
+                      margin: 0;
+                      width: 26px;
+                      height: 27px;
+                      position: relative;
+                      border-radius: 3px;
+                      border: 1px solid #000;
+                      box-sizing: border-box;
+                      z-index: 1;
+                    " type="checkbox" />
+                    </div>
+                    <div style="
+                    flex: 1;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    min-width: 200px;
+                    row-gap: 20px;
+                  ">
+                        <div style="
+                      height: 33px;
+                      position: relative;
+                      font-size: 16px;
+                      line-height: 150%;
+                      font-family: Roboto;
+                      color: #000;
+                      text-align: left;
+                      display: flex;
+                      align-items: center;
+                      z-index: 1;
+                    ">
+                            I agree to the
+                        </div>
+                        <div style="
+                      height: 33px;
+                      flex: 1;
+                      position: relative;
+                      font-size: 16px;
+                      line-height: 150%;
+                      font-family: Roboto;
+                      color: #1367e6;
+                      text-align: left;
+                      display: flex;
+                      align-items: center;
+                      min-width: 120px;
+                      z-index: 1;
+                      margin-left: -4px;
+                    ">
+                            terms and conditions
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" style="
+                  cursor: pointer;
+                  border: none;
+                  padding: 6px 0px 8.5px 21px;
+                  background-color: #4644a0;
+                  width: 91px;
+                  border-radius: 10px;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-start;
+                  justify-content: flex-end;
+                  box-sizing: border-box;
+                  z-index: 1;
+                ">
+                    <div style="
+                    height: 41.5px;
+                    width: 91px;
+                    position: relative;
+                    border-radius: 10px;
+                    background-color: #4644a0;
+                    display: none;
+                  "></div>
+                    <b style="
+                    flex: 1;
+                    position: relative;
+                    font-size: 16px;
+                    line-height: 150%;
+                    font-family: Roboto;
+                    color: #fff;
+                    text-align: left;
+                    z-index: 1;
+                  ">Submit</b>
+                </button>
+            </div>
+        </form>
+    </section>
+    <footer style="
+            align-self: stretch;
+            background-color: #000;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 80px 64px;
+            box-sizing: border-box;
+            gap: 80px 0px;
+            max-width: 100%;
+            text-align: left;
+            font-size: 25.1px;
+            color: #fff;
+            font-family: Inter;
+          ">
+        <div style="
+              align-self: stretch;
+              display: flex;
+              flex-direction: row;
+              align-items: flex-start;
+              justify-content: flex-start;
+              padding: 0px 92px 0px 0px;
+              box-sizing: border-box;
+              row-gap: 20px;
+              max-width: 100%;
+            ">
+            <div style="
+                width: 500px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                max-width: 100%;
+              ">
+                <div style="
+                  height: 88px;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  justify-content: center;
+                  padding: 20px 0px;
+                  box-sizing: border-box;
+                ">
+                    <div style="
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                  ">
+                        <b style="position: relative">COMP1640</b>
+                    </div>
+                </div>
+            </div>
+            <div style="
+                flex: 1;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 0px 40px;
+                min-width: 468px;
+                min-height: 248px;
+                max-width: 100%;
+                font-size: 16px;
+                font-family: Roboto;
+              ">
+                <div style="
+                  flex: 1;
+                  overflow: hidden;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                  gap: 16px 0px;
+                  min-width: 221px;
+                  max-width: 100%;
+                ">
+                    <div style="
+                    align-self: stretch;
+                    position: relative;
+                    line-height: 150%;
+                    font-weight: 600;
+                  ">
+                        About Us
+                    </div>
+                    <div style="
+                    align-self: stretch;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    max-width: 100%;
+                    font-size: 14px;
+                  ">
+                        <div style="
+                      align-self: stretch;
+                      display: flex;
+                      flex-direction: row;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      padding: 8px 0px;
+                      box-sizing: border-box;
+                      max-width: 100%;
+                    ">
+                            <div style="
+                        flex: 1;
+                        position: relative;
+                        line-height: 150%;
+                        display: inline-block;
+                        max-width: 100%;
+                      ">
+                                Popular
+                            </div>
+                        </div>
+                        <div style="
+                      align-self: stretch;
+                      display: flex;
+                      flex-direction: row;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      padding: 8px 0px;
+                      box-sizing: border-box;
+                      max-width: 100%;
+                    ">
+                            <div style="
+                        flex: 1;
+                        position: relative;
+                        line-height: 150%;
+                        display: inline-block;
+                        max-width: 100%;
+                      ">
+                                Trending
+                            </div>
+                        </div>
+                        <div style="
+                      align-self: stretch;
+                      display: flex;
+                      flex-direction: row;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      padding: 8px 0px;
+                      box-sizing: border-box;
+                      max-width: 100%;
+                    ">
+                            <div style="
+                        flex: 1;
+                        position: relative;
+                        line-height: 150%;
+                        display: inline-block;
+                        max-width: 100%;
+                      ">
+                                Contact
+                            </div>
+                        </div>
+                        <div style="
+                      align-self: stretch;
+                      display: flex;
+                      flex-direction: row;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      padding: 8px 0px;
+                      box-sizing: border-box;
+                      max-width: 100%;
+                    ">
+                            <div style="
+                        flex: 1;
+                        position: relative;
+                        line-height: 150%;
+                        display: inline-block;
+                        max-width: 100%;
+                      ">
+                                Support/Help
+                            </div>
+                        </div>
+                        <div style="
+                      align-self: stretch;
+                      display: flex;
+                      flex-direction: row;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      padding: 8px 0px;
+                      box-sizing: border-box;
+                      max-width: 100%;
+                    ">
+                            <div style="
+                        flex: 1;
+                        position: relative;
+                        line-height: 150%;
+                        display: inline-block;
+                        max-width: 100%;
+                      ">
+                                Request Topics
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="
+                  flex: 1;
+                  display: flex;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                  gap: 16px 0px;
+                  min-width: 221px;
+                  max-width: 100%;
+                ">
+                    <div style="
+                    align-self: stretch;
+                    position: relative;
+                    line-height: 150%;
+                    font-weight: 600;
+                  ">
+                        Follow Us
+                    </div>
+                    <div style="
+                    align-self: stretch;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    font-size: 14px;
+                  ">
+                        <div style="
+                      align-self: stretch;
+                      display: flex;
+                      flex-direction: row;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      padding: 8px 0px;
+                      gap: 0px 12px;
+                    ">
+                            <img style="
+                        height: 24px;
+                        width: 24px;
+                        position: relative;
+                        overflow: hidden;
+                        flex-shrink: 0;
+                        min-height: 24px;
+                      " loading="lazy" alt="" src="./public/icon--facebook.svg" />
+
+                            <div style="position: relative; line-height: 150%">
+                                Facebook
+                            </div>
+                        </div>
+                        <div style="
+                      align-self: stretch;
+                      display: flex;
+                      flex-direction: row;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      padding: 8px 0px;
+                      gap: 0px 12px;
+                    ">
+                            <img style="
+                        height: 24px;
+                        width: 24px;
+                        position: relative;
+                        overflow: hidden;
+                        flex-shrink: 0;
+                        min-height: 24px;
+                      " loading="lazy" alt="" src="./public/icon--instagram.svg" />
+
+                            <div style="position: relative; line-height: 150%">
+                                Instagram
+                            </div>
+                        </div>
+                        <div style="
+                      align-self: stretch;
+                      display: flex;
+                      flex-direction: row;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      padding: 8px 0px;
+                      gap: 0px 12px;
+                    ">
+                            <img style="
+                        height: 24px;
+                        width: 24px;
+                        position: relative;
+                        overflow: hidden;
+                        flex-shrink: 0;
+                        min-height: 24px;
+                      " loading="lazy" alt="" src="./public/icon--twitter.svg" />
+
+                            <div style="position: relative; line-height: 150%">
+                                Twitter
+                            </div>
+                        </div>
+                        <div style="
+                      align-self: stretch;
+                      display: flex;
+                      flex-direction: row;
+                      align-items: flex-start;
+                      justify-content: flex-start;
+                      padding: 8px 0px;
+                      gap: 0px 12px;
+                    ">
+                            <img style="
+                        height: 24px;
+                        width: 24px;
+                        position: relative;
+                        overflow: hidden;
+                        flex-shrink: 0;
+                        min-height: 24px;
+                      " loading="lazy" alt="" src="./public/icon--linkedin.svg" />
+
+                            <div style="position: relative; line-height: 150%">
+                                LinkedIn
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="
+              align-self: stretch;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: flex-start;
+              gap: 32px 0px;
+              max-width: 100%;
+              font-size: 14px;
+              font-family: Roboto;
+            ">
+            <div style="
+                align-self: stretch;
+                height: 1px;
+                position: relative;
+                background-color: #fff;
+              "></div>
+            <div style="
+                align-self: stretch;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                max-width: 100%;
+                gap: 20px;
+              ">
+                <div style="position: relative; line-height: 150%">
+                    2024 COMP1640. All right reserved.
+                </div>
+                <div style="
+                  width: 345px;
+                  display: flex;
+                  flex-direction: row;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                  gap: 0px 24px;
+                  max-width: 100%;
+                ">
+                    <div style="
+                    position: relative;
+                    text-decoration: underline;
+                    line-height: 150%;
+                  ">
+                        Privacy Policy
+                    </div>
+                    <div style="
+                    flex: 1;
+                    position: relative;
+                    text-decoration: underline;
+                    line-height: 150%;
+                    display: inline-block;
+                    min-width: 68px;
+                  ">
+                        Terms of Service
+                    </div>
+                    <div style="
+                    flex: 1;
+                    position: relative;
+                    text-decoration: underline;
+                    line-height: 150%;
+                    display: inline-block;
+                    min-width: 68px;
+                  ">
+                        Cookies Settings
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
