@@ -1,4 +1,5 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model WebEnterprise_1640.Models.search;
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,26 @@
     <title>@ViewData["Title"] - WebEnterprise_1640</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="~/WebEnterprise_1640.styles.css" asp-append-version="true" />
 </head>
+<style>
+    .fa-search:before{
+        content: "\f002";
+        /* background: gray; */
+        font-size: 30px;
+        color: gray;
+        position: absolute;
+        /* top: 150px; */
+        /* left: 111px; */
+        top: 61%;
+        left: 4%;
+        cursor:pointer;
+    };
+    .frame-divider{
+        position:relative;
+    }
+ </style>
 <body>
     <div class="student-magazine">
         <div class="navbar-3">
@@ -38,13 +57,17 @@
         </div>
         <section class="blog-42">
             <header class="frame-search-bar">
-                <div class="frame-divider">
-                    <div class="search">
-                        <div class="panel"></div>
-                        <img class="icon-search"
-                             alt=""
-                             src="./public/icon-search@2x.png" />
-                    </div>
+              
+                <div style="position:relative" class="frame-divider">
+                    <form asp-controller="Magazines" asp-action="Index" class="form-horizontal row-border" method="post" enctype="multipart/form-data">
+                        <button style="display:contents" type="submit"><i style="" class="fa fa-search" aria-hidden="true"></i></button>    <div class="panel"></div> <input asp-for="searchKey" name="searchKey" style="height:50px" class="search">
+                
+                        
+                    
+                    </form>
+                  
+                     
+
                 </div>
                 <div class="title">
                     <div class="section-title">

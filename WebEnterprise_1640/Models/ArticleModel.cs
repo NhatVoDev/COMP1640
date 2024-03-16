@@ -46,4 +46,8 @@ namespace WebEnterprise_1640.Models
 
         public string TimeSubmit { get; set; }
     }
+    public class search
+    {
+        public string searchKey { get; set; }
+    }
 }

@@ -357,7 +357,6 @@
                 ">
                     <div style="
                     height: 63px;
-                    width: 1292px;
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
@@ -405,7 +404,6 @@
                             <div style="
                         position: relative;
                         line-height: 150%;
-                        white-space: pre-wrap;
                         display: inline-block;
                         max-width: 122%;
                         flex-shrink: 0;
@@ -438,7 +436,6 @@
                 ">
                     <div style="
                     height: 62px;
-                    width: 1292px;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
@@ -485,13 +482,12 @@
                             <div style="
                         position: relative;
                         line-height: 150%;
-                        white-space: pre-wrap;
                         display: inline-block;
                         max-width: 123%;
                         flex-shrink: 0;
 
                       ">
-                                @ViewBag.TimeEnd   Mar-20-2024 11:59 PM
+                                @ViewBag.TimeEnd 
                             </div>
 
                         </div>
@@ -514,7 +510,6 @@
               max-width: 100%;
             "
               asp-controller="ArticleModel" asp-action="Create" class="form-horizontal row-border" method="post" enctype="multipart/form-data">
-            >
             <input asp-for="MagazineId" type="hidden" name="MagazineId" class="form-control" id="translate_title" value="@ViewBag.Magazines.Id" placeholder="Tech Terrain: Navigating the Digital Landscape">
             <div style="
                 width: 1314px;
@@ -676,7 +671,7 @@
                         color: #000;
                         text-align: left;
                       ">
-                                <input style="color:black" type="file" />
+                                <input style="color:black" name="file" type="file" />
                             </div>
                         </div>
                     </div>
@@ -739,12 +734,131 @@
                         color: #000;
                         text-align: left;
                       ">
-                                <input style="color:black" type="file" />
+                                <input style="color:black" name="file" type="file" />
                             </div>
                         </div>
                     </div>
                 </div>
 
+            </div>
+            <div style="
+                width: 346px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                gap: 17px 0px;
+                max-width: 100%;
+              ">
+                <div style="
+                  align-self: stretch;
+                  display: flex;
+                  flex-direction: row;
+                  flex-wrap: wrap;
+                  align-items: flex-start;
+                  justify-content: flex-start;
+                  gap: 0px 13px;
+                ">
+                    <div style="
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    padding: 3px 0px 0px;
+                  ">
+                        <input style="
+                      margin: 0;
+                      width: 26px;
+                      height: 27px;
+                      position: relative;
+                      border-radius: 3px;
+                      border: 1px solid #000;
+                      box-sizing: border-box;
+                      z-index: 1;
+                    " type="checkbox" id="chekcboxid" onclick="checkbox()" value="1" />
+                    </div>
+                    <div style="
+                    flex: 1;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    min-width: 200px;
+                    row-gap: 20px;
+                  ">
+                        <div style="
+                      height: 33px;
+                      position: relative;
+                      font-size: 16px;
+                      line-height: 150%;
+                      font-family: Roboto;
+                      color: #000;
+                      text-align: left;
+                      display: flex;
+                      align-items: center;
+                      z-index: 1;
+                    ">
+                            I agree to the
+                        </div>
+                        <div style="
+                      height: 33px;
+                      flex: 1;
+                      position: relative;
+                      font-size: 16px;
+                      line-height: 150%;
+                      font-family: Roboto;
+                      color: #1367e6;
+                      text-align: left;
+                      display: flex;
+                      align-items: center;
+                      min-width: 120px;
+                      z-index: 1;
+                      margin-left: -4px;
+                    ">
+                            terms and conditions
+                        </div>
+                    </div>
+                </div>
+                @if (ViewBag.Deadline < 0)
+                {
+                    <button id="btnSubmit" type="submit" style="
+                   display:none;
+                  cursor: pointer;
+                  border: none;
+                  padding: 6px 0px 8.5px 21px;
+                  background-color: #4644a0;
+                  width: 91px;
+                  border-radius: 10px;
+                  flex-direction: row;
+                  align-items: flex-start;
+                  justify-content: flex-end;
+                  box-sizing: border-box;
+                  z-index: 1;
+                ">
+                        <div style="
+                    height: 41.5px;
+                    width: 91px;
+                    position: relative;
+                    border-radius: 10px;
+                    background-color: #4644a0;
+                    display: none;
+                  "></div>
+                        <b style="
+                    flex: 1;
+                    position: relative;
+                    font-size: 16px;
+                    line-height: 150%;
+                    font-family: Roboto;
+                    color: #fff;
+                    text-align: left;
+                    z-index: 1;
+                  ">Submit</b>
+                    </button>
+                }
+                @if (ViewBag.Deadline > 0)
+                {
+                    <p>Trễ Hạn Nộp</p>
+                }
             </div>
         </form>
     </section>

@@ -1,0 +1,4 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model WebEnterprise_1640.Models.DocumentModel;
+
+<a style="color:red" href="@Url.Action("DeleteFile","ArticleModel", new {id = @ViewBag.File.Id})">Xóa</a>

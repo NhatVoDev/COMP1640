@@ -1,1569 +1,351 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
-<div style="
-        width: 100%;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        letter-spacing: normal;
-      ">
-    <header style="
-          align-self: stretch;
-          background-color: #fff;
-          box-shadow: 0px -1px 0px #000 inset;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          padding: 14px 64px;
-          text-align: left;
-          font-size: 16px;
-          color: #000;
-          font-family: Roboto;
-        ">
-        <div style="
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-          ">
-            <div style="
-              height: 89px;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: center;
-              padding: 20px 0px;
-              box-sizing: border-box;
-              font-size: 25.1px;
-              font-family: Inter;
-            ">
-                <div style="
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-              ">
-                    <a asp-controller="Magazines" asp-action="" style="position: relative; white-space: nowrap">BEE MAGAZINE</a>
-                </div>
-            </div>
-            <div style="
-              width: 167px;
-              overflow: hidden;
-              flex-shrink: 0;
-              display: flex;
-              flex-direction: row;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: 0px 32px;
-            ">
-                <div style="
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-                padding: 10px;
-              ">
-                    <div style="position: relative; line-height: 150%">Home</div>
-                </div>
-                <button style="
-                cursor: pointer;
-                border: none;
-                padding: 10px;
-                background-color: transparent;
-                border-bottom: 1px solid #000;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-              ">
-                    <div style="
-                  position: relative;
-                  font-size: 16px;
-                  line-height: 150%;
-                  font-family: Roboto;
-                  color: #000;
-                  text-align: left;
-                ">
-                        Upload
+@*href="@Url.Action("Edit","ArticleModel", new {id = @ViewBag.Articles.Id})"*@;
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./Student Magazine Submitted.css" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700;900&display=swap" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/submit.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebEnterprise_1640.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="student-magazine-submitted">
+        <header class="navbar-3">
+            <div class="container">
+                <div class="ddsgnr-library">
+                    <div class="ddsgnr-library1">
+                        <b class="bee-magazine">BEE MAGAZINE</b>
                     </div>
-                </button>
-            </div>
-            <div style="
-              width: 245px;
-              background-color: #fff;
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              justify-content: center;
-              gap: 0px 32px;
-              text-align: center;
-            ">
-                <div style="
-                height: 36px;
-                flex: 1;
-                position: relative;
-                line-height: 150%;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                white-space: nowrap;
-              ">
-                    Hi, Ed
                 </div>
-                <div style="
-                width: 94px;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                text-align: left;
-              ">
-                    <button style="
-                  flex: 1;
-                  border-radius: 5px;
-                  border: 1px solid #000;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-                  justify-content: center;
-                  padding: 8px 19px;
-                  white-space: nowrap;
-                  background-color: #ffffff;
-                ">
-                        <div style="position: relative; line-height: 150%">Log out</div>
+                <div class="column">
+                    <div class="row-card-content-title">
+                        <div class="home">Home</div>
+                    </div>
+                    <button class="row-card-content-title1">
+                        <div class="upload">Upload</div>
                     </button>
                 </div>
+                <div class="column1">
+                    <div class="hi-ed">Hi, Ed</div>
+                    <div class="column2">
+                        <div class="button">
+                            <div class="button1">Log out</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </header>
-    <section style="
-          align-self: stretch;
-          background-color: #fff;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          padding: 112px 62px 0px 64px;
-          box-sizing: border-box;
-          position: relative;
-          gap: 65px 0px;
-          max-width: 100%;
-          text-align: left;
-          font-size: 24px;
-          color: #000;
-          font-family: Roboto;
-        ">
-        <div style="
-            align-self: stretch;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: flex-start;
-            gap: 31px 0px;
-            max-width: 100%;
-            color: #0053d8;
-          ">
-            <div style="
-              width: 1312px;
-              overflow-x: auto;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: flex-start;
-              max-width: 100%;
-            ">
-                <div style="
-                width: 1312px;
-                background-color: #fff;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: flex-start;
-              ">
-                    <div style="
-                  flex: 1;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-                  justify-content: flex-start;
-                  padding: 0px 10px;
-                  box-sizing: border-box;
-                  gap: 0px 24px;
-                  min-height: 52px;
-                  max-width: 100%;
-                ">
-                        <div style="
-                    width: 204px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                  ">
-                            <div style="
-                      width: 1292px;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      justify-content: flex-start;
-                      min-height: 42px;
-                      max-width: 633%;
-                      flex-shrink: 0;
-                    ">
-                                <b style="
-                        align-self: stretch;
-                        position: relative;
-                        line-height: 140%;
-                      ">Magazine title:</b>
+        </header>
+        <section class="blog-42">
+            <div class="status-card-content">
+                <div class="magazine-inf">
+                    <div class="row">
+                        <div class="card">
+                            <div class="content">
+                                <div class="title">
+                                    <b class="article-title">Article title:</b>
+                                </div>
+                            </div>
+                            <div class="content1">
+                                <div class="title1">
+                                    <div class="tech-terrain-navigating">
+                                        @ViewBag.Articles.Name
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div style="
-                    width: 204px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    color: #000;
-                  ">
-                            <div style="
-                      width: 1292px;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      justify-content: flex-start;
-                      min-height: 42px;
-                      max-width: 633%;
-                      flex-shrink: 0;
-                    ">
-                                <div style="
-                        width: 1051px;
-                        position: relative;
-                        line-height: 140%;
-                        display: inline-block;
-                        max-width: 100%;
-                      ">
-                                    
-                                    @ViewBag.Articles.Name
+                    </div>
+                    <div class="row1">
+                        <div class="card1">
+                            <div class="content2">
+                                <div class="title2">
+                                    <b class="article-description">Article description: </b>
+                                </div>
+                            </div>
+                            <div class="content3">
+                                <div class="title3">
+                                    <div class="lorem-ipsum-dolor">
+                                        @ViewBag.Articles.Description
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="card2">
+                            <div class="content4">
+                                <div class="title4">
+                                    <b class="date-submitted">Date submitted:</b>
+                                </div>
+                            </div>
+                            <div class="content5">
+                                <div class="title5">
+                                    <div class="mar-15-2024-1100-am">@ViewBag.Articles.TimeSubmit</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row3">
+                        <div class="card3">
+                            <div class="content6">
+                                <div class="title6">
+                                    <b class="final-deadline">Final deadline:</b>
+                                </div>
+                            </div>
+                            <div class="content7">
+                                <div class="title7">
+                                    <div class="may-10-2024-1159-pm">@ViewBag.Articles.TimeEnd</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div style="
-                width: 1312px;
-                background-color: #fff;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: flex-start;
-              ">
-                    <div style="
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-                  justify-content: flex-start;
-                  padding: 0px 16px 0px 10px;
-                  box-sizing: border-box;
-                  gap: 0px 24px;
-                  min-height: 52px;
-                  max-width: 100%;
-                ">
-                        <div style="
-                    width: 252px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                  ">
-                            <div style="
-                      width: 1292px;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      justify-content: flex-start;
-                      min-height: 42px;
-                      max-width: 513%;
-                      flex-shrink: 0;
-                    ">
-                                <b style="
-                        align-self: stretch;
-                        position: relative;
-                        line-height: 140%;
-                      ">
-                                    Magazine description:
-                                </b>
-                            </div>
-                        </div>
-                        <div style="
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    max-width: 100%;
-                    color: #000;
-                  ">
-                            <div style="
-                      width: 1010px;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      justify-content: flex-start;
-                      min-height: 42px;
-                      max-width: 100%;
-                    ">
-                                <div style="
-                        width: 1292px;
-                        position: relative;
-                        line-height: 150%;
-                        display: inline-block;
-                        max-width: 128%;
-                        flex-shrink: 0;
-                      ">
-                                    @ViewBag.Articles.Description
+                <div class="status-card-content1">
+                    <div class="status">
+                        <div class="card4">
+                            <input class="content8" placeholder="Status:" type="text" />
+
+                            <div class="content9">
+                                <div class="title8">
+                                    <div class="submitted">Submitted</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div style="
-                width: 1312px;
-                background-color: #fff;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: flex-start;
-              ">
-                    <div style="
-                  flex: 1;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-                  justify-content: flex-start;
-                  padding: 0px 10px;
-                  box-sizing: border-box;
-                  gap: 0px 24px;
-                  min-height: 52px;
-                  max-width: 100%;
-                ">
-                        <div style="
-                    height: 63px;
-                    width: 1292px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    justify-content: center;
-                    padding: 10px 0px;
-                    box-sizing: border-box;
-                  ">
-                            <div style="
-                      width: 1292px;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      justify-content: flex-start;
-                      min-height: 42px;
-                      max-width: 633%;
-                      flex-shrink: 0;
-                    ">
-                                <b style="
-                        align-self: stretch;
-                        position: relative;
-                        line-height: 140%;
-                      ">Deadline to submit:</b>
-                            </div>
-                        </div>
-                        <div style="
-                    width: 204px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    color: #000;
-                  ">
-                            <div style="
-                      width: 1062px;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      justify-content: flex-start;
-                      min-height: 42px;
-                      max-width: 521%;
-                      flex-shrink: 0;
-                    ">
-                                <div style="
-                        width: 1292px;
-                        position: relative;
-                        line-height: 150%;
-                        white-space: pre-wrap;
-                        display: inline-block;
-                        max-width: 122%;
-                        flex-shrink: 0;
-                      ">
-                                    @* Mar-15-2024 11:00 AM *@
-                                    @ViewBag.Articles.TimeSubmit
+                    @foreach (var file in ViewBag.File)
+                    {
+                        <div class="file-submit">
+                            <div class="card5">
+                                <div class="content10">
+                                    <div class="title9">
+                                        <b class="file-submissions">File submissions:</b>
+                                    </div>
+                                </div>
+                                <div class="content11">
+                                    <div class="title10">
+                                        <img class="title-child"
+                                             alt=""
+                                             src="./public/rectangle-8.svg" />
+
+                                        <div class="comp1640-techterrrainnavigati">
+                                            @file.File
+                                        </div>
+                                        <img class="icon"
+                                             loading="lazy"
+                                             alt=""
+                                             src="./public/icon@2x.png" />
+
+                                        <img class="title-item"
+                                             loading="lazy"
+                                             alt=""
+                                             src="./public/line-2.svg" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div style="
-                width: 1312px;
-                background-color: #fff;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: flex-start;
-              ">
-                    <div style="
-                  flex: 1;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-                  justify-content: flex-start;
-                  padding: 0px 10px;
-                  box-sizing: border-box;
-                  gap: 0px 24px;
-                  min-height: 52px;
-                  max-width: 100%;
-                ">
-                        <div style="
-                    height: 62px;
-                    width: 1292px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: flex-start;
-                    padding: 10px 0px;
-                    box-sizing: border-box;
-                  ">
-                            <div style="
-                      height: 42px;
-                      width: 1292px;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      justify-content: flex-start;
-                      max-width: 633%;
-                      flex-shrink: 0;
-                    ">
-                                <b style="
-                        width: 190px;
-                        position: relative;
-                        line-height: 140%;
-                        display: inline-block;
-                      ">Final deadline:</b>
-                            </div>
-                        </div>
-                        <div style="
-                    width: 204px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: flex-start;
-                    color: #000;
-                  ">
-                            <div style="
-                      width: 1054px;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      justify-content: flex-start;
-                      min-height: 42px;
-                      max-width: 517%;
-                      flex-shrink: 0;
-                    ">
-                                <div style="
-                        width: 1292px;
-                        position: relative;
-                        line-height: 150%;
-                        white-space: pre-wrap;
-                        display: inline-block;
-                        max-width: 123%;
-                        flex-shrink: 0;
-                      ">
-                                    @ViewBag.Articles.TimeEnd
+                        <div class="image">
+                            <div class="card6">
+                                <div class="content12">
+                                    <div class="title11">
+                                        <b class="image-file">Image File:</b>
+                                    </div>
+                                </div>
+                                <div class="content13">
+                                    <div class="title12">
+                                        <img class="title-inner"
+                                             alt=""
+                                             src="./public/rectangle-8-1.svg" />
+
+                                        <div class="landingpicturefortechterrrain">
+                                            @file.Image
+                                        </div>
+                                        <img class="icon1" alt="" src="./public/icon-1@2x.png" />
+
+                                        <img class="line-icon" alt="" src="./public/line-2-1.svg" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    }
+
+                </div>
+                <div class="instagram-link">
+                    <div class="twitter-link">
+                        <a style="color:unset ;text-decoration:none" href="@Url.Action("Edit","ArticleModel", new {id = @ViewBag.Articles.Id})" class="edit-submit">
+                            <img class="edit-submit-child"
+                                 alt=""
+                                 src="./public/rectangle-10.svg" />
+
+                            <b class="edit-submission">Edit Submission</b>
+                        </a>
+                        <a style="color:unset ;text-decoration:none" href="@Url.Action("Delete","ArticleModel", new {id = @ViewBag.Articles.Id})" class="remove-submit">
+                            <img class="remove-submit-child"
+                                 alt=""
+                                 src="./public/rectangle-10.svg" />
+
+                            <b class="remove-submission">Remove Submission</b>
+                        </a>
                     </div>
                 </div>
             </div>
-            <div style="
-              align-self: stretch;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: flex-start;
-              padding: 0px 0px 9px;
-              box-sizing: border-box;
-              max-width: 100%;
-              color: #000;
-            ">
-                <div style="
-                align-self: stretch;
-                background-color: #cddffc;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: flex-start;
-                max-width: 100%;
-              ">
-                    <div style="
-                  flex: 1;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-                  justify-content: flex-start;
-                  padding: 0px 10px;
-                  box-sizing: border-box;
-                  gap: 0px 24px;
-                  min-height: 52px;
-                  max-width: 100%;
-                ">
-                        <input style="
-                    width: 204px;
-                    border: none;
-                    outline: none;
-                    background-color: transparent;
-                    height: 62px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: flex-start;
-                    padding: 10px 0px;
-                    box-sizing: border-box;
-                    font-family: Roboto;
-                    font-weight: 700;
-                    font-size: 24px;
-                    color: #000;
-                  " placeholder="Status:" type="text" />
-
-                        <div style="
-                    width: 204px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: flex-start;
-                  ">
-                            <div style="
-                      width: 1063px;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      justify-content: flex-start;
-                      min-height: 42px;
-                      max-width: 521%;
-                      flex-shrink: 0;
-                    ">
-                                <div style="
-                        width: 1292px;
-                        position: relative;
-                        line-height: 150%;
-                        display: inline-block;
-                        max-width: 122%;
-                        flex-shrink: 0;
-                      ">
-                                    Submitted
-                                </div>
+          
+            <div class="privacy-policy-terms">
+              
+                <div class="comment">
+                    <b class="feedback-comment">Feedback, comment</b>
+                    <div class="ed-sheeran-parent">
+                        <div class="ed-sheeran">Ed Sheeran:</div>
+                        <div class="comment-content-wrapper">
+                            <div class="comment-content">
+                                <p class="good-point">Good point:</p>
+                                <ul class="lorem-ipsum-dolor-sit-amet-co">
+                                    <li class="lorem-ipsum-dolor1">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        Duis aute irure dolor in reprehenderit in voluptate velit
+                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                                        sint occaecat cupidatat non proident, sunt in culpa qui
+                                        officia deserunt mollit anim id est laboru
+                                    </li>
+                                </ul>
+                                <p class="need-to-improve">Need to improve:</p>
+                                <ul class="lorem-ipsum-dolor-sit-amet-co1">
+                                    <li>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                        sed do eiusmod tempor incididunt ut labore et dolore magna
+                                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+                    <div class="comment-box-parent">
+                        <img class="comment-box-icon"
+                             alt=""
+                             src="./public/comment-box.svg" />
+
+                        <img class="icon-lecture"
+                             loading="lazy"
+                             alt=""
+                             src="./public/icon-lecture@2x.png" />
+
+                        <img class="icon-time"
+                             loading="lazy"
+                             alt=""
+                             src="./public/icon-time@2x.png" />
+                    </div>
+                    <div class="hour-ago-text">
+                        <div class="hour-ago">1 hour ago</div>
+                    </div>
                 </div>
-                <div style="
-                align-self: stretch;
-                background-color: #cddffc;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: flex-start;
-                max-width: 100%;
-              ">
-                    <div style="
-                  flex: 1;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-                  justify-content: flex-start;
-                  padding: 0px 10px;
-                  box-sizing: border-box;
-                  gap: 0px 24px;
-                  min-height: 52px;
-                  max-width: 100%;
-                ">
-                        <div style="
-                    height: 62px;
-                    width: 204px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: flex-start;
-                    padding: 10px 0px;
-                    box-sizing: border-box;
-                  ">
-                            <div style="
-                      height: 42px;
-                      width: 20px;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      justify-content: flex-start;
-                      max-width: 633%;
-                      flex-shrink: 0;
-                    ">
-                                <b style="position: relative; line-height: 140%; width: 300px;">File submissions:</b>
-                            </div>
-                        </div>
-                        <div style="
-                    width: 641px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: flex-start;
-                    max-width: 100%;
-                    font-size: 16px;
-                  ">
-                            <div style="
-                      height: 42px;
-                      width: 1063px;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      justify-content: flex-start;
-                      position: relative;
-                      gap: 8px 0px;
-                      max-width: 166%;
-                      flex-shrink: 0;
-                    ">
-                                <img style="
-                        width: 527px;
-                        height: 24px;
-                        position: absolute;
-                        margin: 0 !important;
-                        top: 9px;
-                        left: 0px;
-                        border-radius: 3px;
-                      " alt="" src="./public/rectangle-8-1.svg" />
+                <div class="comment-box-input">
+                    <div class="comment1">
+                        <img class="btn-send-icon"
+                             loading="lazy"
+                             alt=""
+                             src="./public/btn-send@2x.png" />
 
-                                <div style="
-                        position: absolute;
-                        margin: 0 !important;
-                        top: 9px;
-                        left: 45px;
-                        line-height: 150%;
-                        z-index: 1;
-                      ">
-                                    @ViewBag.File.File
-                                </div>
-                                <img style="
-                        width: 16px;
-                        height: 17px;
-                        position: absolute;
-                        margin: 0 !important;
-                        top: 12px;
-                        left: 25px;
-                        object-fit: cover;
-                        z-index: 1;
-                      " loading="lazy" alt="" src="./public/icon2@2x.png" />
+                        <div class="comment-box-group">
+                            <img class="comment-box-icon1"
+                                 alt=""
+                                 src="./public/comment-box-1.svg" />
 
-                                <img style="
-                        width: 18px;
-                        height: 1px;
-                        position: absolute;
-                        margin: 0 !important;
-                        top: 21px;
-                        left: 4px;
-                        z-index: 1;
-                      " loading="lazy" alt="" src="./public/line-2.svg" />
-                            </div>
+                            <b class="add-a-comment">Add a comment:</b>
                         </div>
                     </div>
                 </div>
-                <div style="
-                align-self: stretch;
-                background-color: #cddffc;
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: flex-start;
-                max-width: 100%;
-              ">
-                    <div style="
-                  flex: 1;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-                  justify-content: flex-start;
-                  padding: 0px 10px;
-                  box-sizing: border-box;
-                  gap: 0px 24px;
-                  min-height: 52px;
-                  max-width: 100%;
-                ">
-                        <div style="
-                    height: 62px;
-                    width: 204px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: flex-start;
-                    padding: 10px 0px;
-                    box-sizing: border-box;
-                  ">
-                            <div style="
-                      height: 42px;
-                      width: 20px;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      justify-content: flex-start;
-                      max-width: 633%;
-                      flex-shrink: 0;
-                    ">
-                                <b style="
-                        width: 190px;
-                        position: relative;
-                        line-height: 140%;
-                        display: inline-block;
-                      ">Image File:</b>
+            </div>
+        </section>
+        <footer class="footer-3">
+            <div class="content14">
+                <div class="newsletter">
+                    <div class="ddsgnr-library2">
+                        <div class="ddsgnr-library3">
+                            <b class="comp1640">COMP1640</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="links">
+                    <div class="column3">
+                        <div class="about-us">About Us</div>
+                        <div class="footer-links">
+                            <div class="link">
+                                <div class="popular">Popular</div>
+                            </div>
+                            <div class="link1">
+                                <div class="trending">Trending</div>
+                            </div>
+                            <div class="link2">
+                                <div class="contact">Contact</div>
+                            </div>
+                            <div class="link3">
+                                <div class="supporthelp">Support/Help</div>
+                            </div>
+                            <div class="link4">
+                                <div class="request-topics">Request Topics</div>
                             </div>
                         </div>
-                        <div style="
-                    width: 641px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: flex-start;
-                    max-width: 100%;
-                    font-size: 16px;
-                  ">
-                            <div style="
-                      height: 42px;
-                      width: 1063px;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      justify-content: flex-start;
-                      position: relative;
-                      gap: 8px 0px;
-                      max-width: 166%;
-                      flex-shrink: 0;
-                    ">
-                                <img style="
-                        width: 308px;
-                        height: 24px;
-                        position: absolute;
-                        margin: 0 !important;
-                        top: 9px;
-                        left: 0px;
-                        border-radius: 3px;
-                      " alt="" src="./public/rectangle-8.svg" />
+                    </div>
+                    <div class="column4">
+                        <div class="follow-us">Follow Us</div>
+                        <div class="social-links">
+                            <div class="link5">
+                                <img class="icon-facebook"
+                                     loading="lazy"
+                                     alt=""
+                                     src="./public/icon--facebook.svg" />
 
-                                <div style="
-                        position: absolute;
-                        margin: 0 !important;
-                        top: 9px;
-                        left: 45px;
-                        line-height: 150%;
-                        z-index: 1;
-                      ">
-                                    @ViewBag.File.Image
-                                </div>
-                                <img style="
-                        width: 16px;
-                        height: 17px;
-                        position: absolute;
-                        margin: 0 !important;
-                        top: 12px;
-                        left: 25px;
-                        object-fit: cover;
-                        z-index: 1;
-                      " alt="" src="./public/icon-1@2x.png" />
+                                <div class="facebook">Facebook</div>
+                            </div>
+                            <div class="link6">
+                                <img class="icon-instagram"
+                                     loading="lazy"
+                                     alt=""
+                                     src="./public/icon--instagram.svg" />
 
-                                <img style="
-                        width: 18px;
-                        height: 1px;
-                        position: absolute;
-                        margin: 0 !important;
-                        top: 21px;
-                        left: 4px;
-                        z-index: 1;
-                      " alt="" src="./public/line-2.svg" />
+                                <div class="instagram">Instagram</div>
+                            </div>
+                            <div class="link7">
+                                <img class="icon-twitter"
+                                     loading="lazy"
+                                     alt=""
+                                     src="./public/icon--twitter.svg" />
+
+                                <div class="twitter">Twitter</div>
+                            </div>
+                            <div class="link8">
+                                <img class="icon-linkedin"
+                                     loading="lazy"
+                                     alt=""
+                                     src="./public/icon--linkedin.svg" />
+
+                                <div class="linkedin">LinkedIn</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div style="
-              width: 1292.8px;
-              display: flex;
-              flex-direction: row;
-              align-items: flex-start;
-              justify-content: center;
-              padding: 0px 20px;
-              box-sizing: border-box;
-              max-width: 100%;
-              font-size: 18px;
-              color: #fff;
-            ">
-                <div style="
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-                gap: 0px 41.1px;
-                max-width: 100%;
-              ">
-                    <a  href="@Url.Action("Edit","ArticleModel", new {id = @ViewBag.Articles.Id})" style="
-                  width: 167.7px;
-                  border-radius: 5px;
-                  background-color: #4644a0;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: flex-start;
-                  justify-content: flex-start;
-                  padding: 5px 0px 6px 18.800000000000185px;
-                  box-sizing: border-box;
-                  white-space: nowrap;
-                  border: none;
-                  color: white;
-                  padding-right: 10px;
-                ">
-                        <img style="
-                    height: 38px;
-                    width: 164.8px;
-                    position: relative;
-                    border-radius: 5px;
-                    display: none;
-                  " alt="" src="./public/rectangle-10-1.svg" />
-
-                        <b style="
-                    flex: 1;
-                    position: relative;
-                    line-height: 150%;
-                    flex-shrink: 0;
-                    z-index: 1;
-                  " </b>
-                        Edit Submission
-                    </a>
-                    <a href="@Url.Action("DeleteView","ArticleModel", new {id = @ViewBag.Articles.Id})" style="
-                  border-radius: 5px;
-                  background-color: #4644a0;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: flex-start;
-                  justify-content: flex-start;
-                  padding: 5px 1.800000000000182px 6px 13px;
-                  white-space: nowrap;
-                  color: white;
-                  border: none;
-                  padding-right: 10px;
-                ">
-                        <img style="
-                    height: 38px;
-                    width: 190px;
-                    position: relative;
-                    border-radius: 5px;
-                    display: none;
-                  " alt="" src="./public/rectangle-102.svg" />
-
-                        <b style="position: relative; line-height: 150%; z-index: 1">Remove Submission</b>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <b style="
-      width: 1312px;
-      position: absolute;
-
-      top: 790px;
-      left: calc(50% - 656px);
-      line-height: 140%;
-      display: inline-block;
-    ">Feedback, comment</b>
-        <div style="
-            align-self: stretch;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            max-width: 100%;
-            text-align: center;
-            font-size: 25px;
-          ">
-            <div style="
-              align-self: stretch;
-              border-radius: 10px;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: flex-start;
-              padding: 51.5px 62px 172.39999999999964px 134px;
-              box-sizing: border-box;
-              position: relative;
-              gap: 24px 0px;
-              max-width: 100%;
-            ">
-                <div style="
-                align-self: stretch;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: flex-start;
-                gap: 13px 0px;
-                max-width: 100%;
-              ">
-                    <div style="
-                  width: 136px;
-                  position: relative;
-                  line-height: 150%;
-                  font-weight: 900;
-                  display: inline-block;
-                  z-index: 1;
-                ">
-                        Ed Sheeran:
+            <div class="divider-line">
+                <div class="divider"></div>
+                <div class="row4">
+                    <div class="comp1640-all-right">
+                        2024 COMP1640. All right reserved.
                     </div>
-                    <div style="
-                  align-self: stretch;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: flex-start;
-                  justify-content: flex-start;
-                  padding: 0px 0px 0px 4px;
-                  box-sizing: border-box;
-                  max-width: 100%;
-                  text-align: left;
-                  font-size: 20px;
-                ">
-                        <div style="
-                    flex: 1;
-                    position: relative;
-                    line-height: 150%;
-                    display: inline-block;
-                    max-width: 100%;
-                    z-index: 1;
-                  ">
-                            <p style="margin: 0">Good point:</p>
-                            <ul style="
-                      margin: 0;
-                      font-family: inherit;
-                      font-size: inherit;
-                      padding-left: 27px;
-                    ">
-                                <li style="margin-bottom: 0px">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                    Duis aute irure dolor in reprehenderit in voluptate velit
-                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                                    sint occaecat cupidatat non proident, sunt in culpa qui
-                                    officia deserunt mollit anim id est laboru
-                                </li>
-                            </ul>
-                            <p style="margin: 0">Need to improve:</p>
-                            <ul style="
-                      margin: 0;
-                      font-family: inherit;
-                      font-size: inherit;
-                      padding-left: 27px;
-                    ">
-                                <li>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div style="
-                width: calc(100% - 2px);
-                height: 406px;
-                position: absolute;
-                margin: 0 !important;
-                top: 15.5px;
-                right: 2px;
-                left: 0px;
-              ">
-                    <img style="
-                  position: absolute;
-                  top: 0px;
-                  left: 0px;
-                  border-radius: 10px;
-                  width: 1312px;
-                  height: 406px;
-                " alt="" src="./public/comment-box.svg" />
-
-                    <img style="
-                  position: absolute;
-                  top: 25px;
-                  left: 23px;
-                  border-radius: 132.5px;
-                  width: 91px;
-                  height: 91px;
-                  object-fit: cover;
-                  z-index: 1;
-                " loading="lazy" alt="" src="./public/icon-lecture2@2x.png" />
-
-                    <img style="
-                  position: absolute;
-                  top: 355px;
-                  left: 138px;
-                  width: 16px;
-                  height: 16px;
-                  object-fit: cover;
-                  z-index: 1;
-                " loading="lazy" alt="" src="./public/icon-time1@2x.png" />
-                </div>
-                <div style="
-                width: 140px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-                padding: 0px 28px;
-                box-sizing: border-box;
-                font-size: 16px;
-              ">
-                    <div style="
-                  flex: 1;
-                  position: relative;
-                  line-height: 150%;
-                  font-weight: 300;
-                  z-index: 1;
-                ">
-                        1 hour ago
+                    <div class="link-collection">
+                        <div class="privacy-policy">Privacy Policy</div>
+                        <div class="terms-of-service">Terms of Service</div>
+                        <div class="cookies-settings">Cookies Settings</div>
                     </div>
                 </div>
             </div>
-            <div style="
-              align-self: stretch;
-              display: flex;
-              flex-direction: row;
-              align-items: flex-start;
-              justify-content: flex-start;
-              padding: 0px 0px 0px 2px;
-              box-sizing: border-box;
-              max-width: 100%;
-              margin-top: -140.9px;
-              text-align: left;
-              font-size: 24px;
-            ">
-                <div style="
-                width: 1312px;
-                border-radius: 10px;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: flex-start;
-                padding: 10px 0px 71px;
-                box-sizing: border-box;
-                gap: 27px 0px;
-                max-width: 100%;
-                z-index: 2;
-              ">
-                    <div style="align-self: stretch; height: 105px; position: relative">
-                        <button style="border: none; cursor: pointer;">
-                            <img style="
-                position: absolute;
-                top: 55px;
-                left: 1269px;
-                width: 51px;
-                height: 50px;
-                object-fit: cover;
-              " alt="" src="./public/btn-send1@2x.png" />
-                        </button>
-
-                        <div style="
-                    position: absolute;
-                    top: 7px;
-                    left: 0.1px;
-                    width: 175.3px;
-                    height: 18.2px;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                  ">
-                            <input style="
-                      height: 61px;
-                      width: 1257px;
-                      position: absolute;
-                      margin: 0 !important;
-                      right: -1081.6px;
-                      bottom: -84.8px;
-                      border-radius: 10px;
-                    " type="text" />
-
-                            <b style="
-                      height: 105px;
-                      width: 1320px;
-                      position: relative;
-                      line-height: 140%;
-                      display: inline-block;
-                      flex-shrink: 0;
-                      max-width: 753%;
-                      pointer-events: none;
-                    ">Add a comment:</b>
-                        </div>
-                    </div>
-                    <div style="
-                  width: 1191px;
-                  display: flex;
-                  flex-direction: row;
-                  align-items: flex-start;
-                  justify-content: flex-start;
-                  position: relative;
-                  max-width: 100%;
-                  font-size: 22px;
-                ">
-                        <div style="
-                    height: 34px;
-                    flex: 1;
-                    position: relative;
-                    line-height: 140%;
-                    font-weight: 500;
-                    white-space: pre-wrap;
-                    display: inline-block;
-                    max-width: 100%;
-                  ">
-                            Anonymous Yes No
-                        </div>
-                        <input style="
-                    height: 18px;
-                    width: 18px;
-                    position: absolute;
-                    margin: 0 !important;
-                    top: 7px;
-                    left: 140px;
-                    z-index: 1;
-                  " type="range" />
-
-                        <div style="
-                    height: 18px;
-                    width: 18px;
-                    position: absolute;
-                    margin: 0 !important;
-                    top: 7px;
-                    left: 225px;
-                  ">
-                            <input style="
-                      position: absolute;
-                      top: 0px;
-                      left: 0px;
-                      border-radius: 50%;
-                      background-color: #4644a0;
-                      border: 0px solid #4644a0;
-                      box-sizing: border-box;
-                      width: 100%;
-                      height: 100%;
-                      z-index: 1;
-                    " type="radio"></input>
-                            <div style="
-                      position: absolute;
-                      top: 5px;
-                      left: 5px;
-                      border-radius: 50%;
-                      background-color: #fff;
-                      width: 8px;
-                      height: 8px;
-                      z-index: 2;
-                    "></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer style="
-          align-self: stretch;
-          background-color: #000;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          padding: 80px 64px;
-          box-sizing: border-box;
-          gap: 80px 0px;
-          max-width: 100%;
-          text-align: left;
-          font-size: 25.1px;
-          color: #fff;
-          font-family: Inter;
-        ">
-        <div style="
-            align-self: stretch;
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: flex-start;
-            padding: 0px 92px 0px 0px;
-            box-sizing: border-box;
-            row-gap: 20px;
-            max-width: 100%;
-          ">
-            <div style="
-              width: 500px;
-              display: flex;
-              flex-direction: column;
-              align-items: flex-start;
-              justify-content: flex-start;
-              max-width: 100%;
-            ">
-                <div style="
-                height: 88px;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: center;
-                padding: 20px 0px;
-                box-sizing: border-box;
-              ">
-                    <div style="
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-                  justify-content: center;
-                ">
-                        <b style="position: relative">COMP1640</b>
-                    </div>
-                </div>
-            </div>
-            <div style="
-              flex: 1;
-              display: flex;
-              flex-direction: row;
-              align-items: flex-start;
-              justify-content: flex-start;
-              gap: 0px 40px;
-              min-width: 468px;
-              min-height: 248px;
-              max-width: 100%;
-              font-size: 16px;
-              font-family: Roboto;
-            ">
-                <div style="
-                flex: 1;
-                overflow: hidden;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: flex-start;
-                gap: 16px 0px;
-                min-width: 221px;
-                max-width: 100%;
-              ">
-                    <div style="
-                  align-self: stretch;
-                  position: relative;
-                  line-height: 150%;
-                  font-weight: 600;
-                ">
-                        About Us
-                    </div>
-                    <div style="
-                  align-self: stretch;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-start;
-                  justify-content: flex-start;
-                  max-width: 100%;
-                  font-size: 14px;
-                ">
-                        <div style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    padding: 8px 0px;
-                    box-sizing: border-box;
-                    max-width: 100%;
-                  ">
-                            <div style="
-                      flex: 1;
-                      position: relative;
-                      line-height: 150%;
-                      display: inline-block;
-                      max-width: 100%;
-                    ">
-                                Popular
-                            </div>
-                        </div>
-                        <div style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    padding: 8px 0px;
-                    box-sizing: border-box;
-                    max-width: 100%;
-                  ">
-                            <div style="
-                      flex: 1;
-                      position: relative;
-                      line-height: 150%;
-                      display: inline-block;
-                      max-width: 100%;
-                    ">
-                                Trending
-                            </div>
-                        </div>
-                        <div style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    padding: 8px 0px;
-                    box-sizing: border-box;
-                    max-width: 100%;
-                  ">
-                            <div style="
-                      flex: 1;
-                      position: relative;
-                      line-height: 150%;
-                      display: inline-block;
-                      max-width: 100%;
-                    ">
-                                Contact
-                            </div>
-                        </div>
-                        <div style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    padding: 8px 0px;
-                    box-sizing: border-box;
-                    max-width: 100%;
-                  ">
-                            <div style="
-                      flex: 1;
-                      position: relative;
-                      line-height: 150%;
-                      display: inline-block;
-                      max-width: 100%;
-                    ">
-                                Support/Help
-                            </div>
-                        </div>
-                        <div style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    padding: 8px 0px;
-                    box-sizing: border-box;
-                    max-width: 100%;
-                  ">
-                            <div style="
-                      flex: 1;
-                      position: relative;
-                      line-height: 150%;
-                      display: inline-block;
-                      max-width: 100%;
-                    ">
-                                Request Topics
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div style="
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                justify-content: flex-start;
-                gap: 16px 0px;
-                min-width: 221px;
-                max-width: 100%;
-              ">
-                    <div style="
-                  align-self: stretch;
-                  position: relative;
-                  line-height: 150%;
-                  font-weight: 600;
-                ">
-                        Follow Us
-                    </div>
-                    <div style="
-                  align-self: stretch;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-start;
-                  justify-content: flex-start;
-                  font-size: 14px;
-                ">
-                        <div style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    padding: 8px 0px;
-                    gap: 0px 12px;
-                  ">
-                            <img style="
-                      height: 24px;
-                      width: 24px;
-                      position: relative;
-                      overflow: hidden;
-                      flex-shrink: 0;
-                      min-height: 24px;
-                    " loading="lazy" alt="" src="./public/icon--facebook.svg" />
-
-                            <div style="position: relative; line-height: 150%">
-                                Facebook
-                            </div>
-                        </div>
-                        <div style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    padding: 8px 0px;
-                    gap: 0px 12px;
-                  ">
-                            <img style="
-                      height: 24px;
-                      width: 24px;
-                      position: relative;
-                      overflow: hidden;
-                      flex-shrink: 0;
-                      min-height: 24px;
-                    " loading="lazy" alt="" src="./public/icon--instagram.svg" />
-
-                            <div style="position: relative; line-height: 150%">
-                                Instagram
-                            </div>
-                        </div>
-                        <div style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    padding: 8px 0px;
-                    gap: 0px 12px;
-                  ">
-                            <img style="
-                      height: 24px;
-                      width: 24px;
-                      position: relative;
-                      overflow: hidden;
-                      flex-shrink: 0;
-                      min-height: 24px;
-                    " loading="lazy" alt="" src="./public/icon--twitter.svg" />
-
-                            <div style="position: relative; line-height: 150%">
-                                Twitter
-                            </div>
-                        </div>
-                        <div style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: flex-start;
-                    justify-content: flex-start;
-                    padding: 8px 0px;
-                    gap: 0px 12px;
-                  ">
-                            <img style="
-                      height: 24px;
-                      width: 24px;
-                      position: relative;
-                      overflow: hidden;
-                      flex-shrink: 0;
-                      min-height: 24px;
-                    " loading="lazy" alt="" src="./public/icon--linkedin.svg" />
-
-                            <div style="position: relative; line-height: 150%">
-                                LinkedIn
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div style="
-            align-self: stretch;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: flex-start;
-            gap: 32px 0px;
-            max-width: 100%;
-            font-size: 14px;
-            font-family: Roboto;
-          ">
-            <div style="
-              align-self: stretch;
-              height: 1px;
-              position: relative;
-              background-color: #fff;
-            "></div>
-            <div style="
-              align-self: stretch;
-              display: flex;
-              flex-direction: row;
-              align-items: flex-start;
-              justify-content: space-between;
-              max-width: 100%;
-              gap: 20px;
-            ">
-                <div style="position: relative; line-height: 150%">
-                    2024 COMP1640. All right reserved.
-                </div>
-                <div style="
-                width: 345px;
-                display: flex;
-                flex-direction: row;
-                align-items: flex-start;
-                justify-content: flex-start;
-                gap: 0px 24px;
-                max-width: 100%;
-              ">
-                    <div style="
-                  position: relative;
-                  text-decoration: underline;
-                  line-height: 150%;
-                ">
-                        Privacy Policy
-                    </div>
-                    <div style="
-                  flex: 1;
-                  position: relative;
-                  text-decoration: underline;
-                  line-height: 150%;
-                  display: inline-block;
-                  min-width: 68px;
-                ">
-                        Terms of Service
-                    </div>
-                    <div style="
-                  flex: 1;
-                  position: relative;
-                  text-decoration: underline;
-                  line-height: 150%;
-                  display: inline-block;
-                  min-width: 68px;
-                ">
-                        Cookies Settings
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</div>
+    </div>
+</body>
+</html>
