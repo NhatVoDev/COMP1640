@@ -180,13 +180,12 @@ namespace WebEnterprise_1640.Areas.Identity.Pages.ArticleModel
             var document = new DocumentModel();
             if (formCollection.Files.Count > 0)
             {
-                for(var i = 0 ; i < formCollection.Files.Count; i++)
+                for(var i = 0 ; i < formCollection.Files.Count ; i++)
                 {
                     var list = formCollection.Files.ToArray();
 
                     var file = list[i];
-                    if (file.Length > 0)
-                    {
+
                         var folderPath = Path.Combine("wwwroot\\media");
                         var pathToSave = Path.Combine(folderPath);
                         fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName.Trim('"');
@@ -204,7 +203,7 @@ namespace WebEnterprise_1640.Areas.Identity.Pages.ArticleModel
                         {
                             document.File = fileName;
                         }
-                    }
+                    
                   
                 }
            

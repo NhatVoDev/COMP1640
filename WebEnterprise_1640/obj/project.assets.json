@@ -11554,17 +11554,21 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\VNT\\.nuget\\packages\\": {}
+    "C:\\Users\\VNT\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VNT\\Desktop\\COMP1640\\WebEnterprise_1640\\WebEnterprise_1640.csproj",
+      "projectUniqueName": "C:\\Users\\VNT\\Desktop\\làm bài thi\\COMP1640\\WebEnterprise_1640\\WebEnterprise_1640.csproj",
       "projectName": "WebEnterprise_1640",
-      "projectPath": "C:\\Users\\VNT\\Desktop\\COMP1640\\WebEnterprise_1640\\WebEnterprise_1640.csproj",
+      "projectPath": "C:\\Users\\VNT\\Desktop\\làm bài thi\\COMP1640\\WebEnterprise_1640\\WebEnterprise_1640.csproj",
       "packagesPath": "C:\\Users\\VNT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VNT\\Desktop\\COMP1640\\WebEnterprise_1640\\obj\\",
+      "outputPath": "C:\\Users\\VNT\\Desktop\\làm bài thi\\COMP1640\\WebEnterprise_1640\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
         "C:\\Users\\VNT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -11642,7 +11646,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

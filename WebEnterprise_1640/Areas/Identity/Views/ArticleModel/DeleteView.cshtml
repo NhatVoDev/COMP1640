@@ -1,4 +1,39 @@
 ﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @model WebEnterprise_1640.Models.DocumentModel;
 
-<a style="color:red" href="@Url.Action("DeleteFile","ArticleModel", new {id = @ViewBag.File.Id})">Xóa</a>
+
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@*href="@Url.Action("Edit","ArticleModel", new {id = @ViewBag.Articles.Id})"*@;
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./Student Magazine Submitted.css" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" />
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700;900&display=swap" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/delete.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/submit.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebEnterprise_1640.styles.css" asp-append-version="true" />
+</head>
+<body>
+
+        <div class="show-modal ">
+            <div class="panel">
+                <div class="img-delete">
+                <img style="height:unset !important" src="~/media/ssssss.png" width="80" height="80" alt="">
+                </div>
+                <h2>Are you sure?</h2>
+                <p>You will not be able to recover anymore !</p>
+                <div class="deleted" onclick="closemodal()">
+                    <a class="del" style="color:white" href="@Url.Action("DeleteFile","ArticleModel", new {id = @ViewBag.File.Id})">Xóa</a>
+                    <button class="can">Cancel</button>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
