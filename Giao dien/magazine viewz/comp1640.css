@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+header {
+    position: relative;
+
+    .nav-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .home {
+            border-bottom: 1px solid black;
+
+            .home-cover {
+                margin: 5px;
+
+                .home-button {
+                    color: black;
+                    background-color: transparent;
+                    border-color: transparent;
+                }
+
+                .home-button:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .icon-menu {
+            display: none;
+        }
+
+        .login-button {
+            padding: 10px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+        }
+
+        .login-button:hover {
+            cursor: pointer;
+            background-color: gray;
+            border-color: gray;
+        }
+    }
+}
+
+body {
+    .background {
+        background-image: url(./img/background.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+
+        .discover {
+            padding: 5px 15px;
+            background-color: transparent;
+            color: white;
+            border-color: white;
+            border-radius: 5px;
+        }
+    }
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px 40px;
+
+    .colum {
+        display: grid;
+        margin-bottom: 60px;
+
+        .colum-2 {
+            .contact {
+                p {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .colum-3 {
+            .social {
+                padding: 10px 0px;
+
+                .facebook {
+                    padding-top: 20px;
+                    font-size: 12px;
+                    display: flex;
+
+                    .icon {
+                        margin-right: 10px;
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .copy-right {
+        font-size: 12px;
+        margin-top: 20px;
+        justify-content: space-between;
+    }
+}
+
+/* Laptop */
+@media screen and (min-width:1025px) {
+    .show-menu {
+        height: 100px;
+        background-color: aquamarine;
+        display: none;
+    }
+
+    header {
+        .nav-bar {
+            padding: 10px 50px;
+
+            .nav-1 {
+                p {
+                    font-size: 35px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    body {
+        .background {
+            height: 100vh;
+
+            .discover {
+                font-size: 27px;
+                margin-top: 650px;
+                margin-left: 50px;
+            }
+        }
+    }
+
+    footer {
+        .colum {
+            grid-template-columns: repeat(3, 1fr);
+
+            .colum-2 {
+                .contact {
+                    padding-top: 10px;
+
+                    p {
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+
+        .copy-right {
+            display: flex;
+
+            .policy {
+                u {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+/* Tablet */
+@media screen and (min-width:741px) and (max-width:1024px) {
+    .show-menu {
+        height: 100px;
+        background-color: aquamarine;
+        display: none;
+    }
+
+    header {
+        .nav-bar {
+            padding: 10px 50px;
+
+            .nav-1 {
+                p {
+                    font-size: 25px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    body {
+        .background {
+            height: 70vh;
+
+            .discover {
+                font-size: 23px;
+                margin-top: 550px;
+                margin-left: 50px;
+            }
+        }
+    }
+
+    footer {
+        .colum {
+            grid-template-columns: repeat(3, 1fr);
+
+            .colum-2 {
+                .contact {
+                    padding-top: 10px;
+
+                    p {
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+
+        .copy-right {
+            display: flex;
+
+            .policy {
+                u {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
+
+/* Mobile */
+@media screen and (max-width:740px) {
+    .show-menu {
+        height: 100px;
+        background-color: #dddbdd;
+    }
+
+    .none {
+        display: none;
+    }
+    .an {
+        display: none;
+    }
+
+    header {
+        .nav-bar {
+            padding: 10px 20px;
+
+            .nav-1 {
+                p {
+                    font-weight: bold;
+                }
+            }
+
+            .home {
+                position: absolute;
+                top: 40px;
+                width: 100%;
+                text-align: center;
+                border-bottom: 1px solid rgb(194, 194, 194);
+                left: 0;
+
+            }
+
+            .button {
+                position: absolute;
+                top: 86px;
+                width: 100%;
+                text-align: center;
+                left: 0;
+
+                .login-button {}
+            }
+
+            .icon-menu {
+                display: block;
+            }
+
+            .icon-menu:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    body {
+        .background {
+            height: 50vh;
+
+            .discover {
+                font-size: 15px;
+                margin-top: 230px;
+                margin-left: 30px;
+            }
+        }
+    }
+
+    footer {
+        .colum {
+            .colum-1 {
+                h2 {
+                    text-align: center;
+                }
+            }
+
+            .colum-2 {
+                margin-top: 30px;
+
+                .contact {
+                    p {
+                        padding-top: 20px;
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            .colum-3 {
+                margin-top: 50px;
+
+                .social {
+                    .facebook {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        .copy-right {
+            .year {
+                font-size: 14px;
+            }
+
+            .policy {
+                font-size: 14px;
+                margin-top: 10px;
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}

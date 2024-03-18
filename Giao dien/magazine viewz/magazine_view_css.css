@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    .body-content {
+        padding: 60px;
+
+        .search {
+            display: flex;
+            padding: 20px;
+            justify-content: center;
+            align-items: center;
+
+            .search-panel {
+                border: 1px solid black;
+                border-radius: 50px;
+                padding: 5px;
+                border-color: gray;
+            }
+        }
+
+        .magazine-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: #cddffc;
+            padding: 10px;
+            font-size: 40px;
+            font-weight: bold;
+            margin-top: 60px;
+        }
+
+        .magazine-1 {
+            display: grid;
+            margin: 30px 0px;
+
+            .magazine-content {
+                border: 1px solid black;
+                border-radius: 5px;
+                padding: 10px;
+                margin: 20px 0px;
+
+                .title {
+                    font-weight: bold;
+                }
+
+                .content {
+                    margin-top: 10px;
+                }
+
+                .time {
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* Laptop */
+@media screen and (min-width:1025px) {
+
+    body {
+        .body-content {
+            padding: 60px;
+
+            .magazine-1 {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 60px;
+
+                .magazine-content {
+                    .title {
+
+                        font-size: 35px;
+                    }
+
+                    .content {
+                        font-size: 25px;
+                    }
+
+                    .time {
+                        font-size: 22px;
+
+                        .deadline {
+                            display: flex;
+
+                            .deadline-1 {
+                                margin-right: 10px;
+                                font-weight: bold;
+                            }
+                        }
+
+                        .final-deadline {
+                            display: flex;
+
+                            .final-deadline-1 {
+                                margin-right: 10px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .search {
+                .search-panel {
+                    width: 400px;
+                }
+            }
+        }
+    }
+}
+
+/* Tablet */
+@media screen and (min-width:741px) and (max-width:1024px) {
+    body {
+        .body-content {
+            padding: 30px;
+
+            .magazine-1 {
+                gap: 20px;
+                grid-template-columns: repeat(2, 1fr);
+
+                .magazine-content {
+                    .title {
+                        font-size: 25px;
+                    }
+
+                    .content {
+                        font-size: 22px;
+                    }
+
+                    .time {
+                        font-size: 20px;
+
+                        .deadline {
+                            .deadline-1 {
+                                margin-right: 10px;
+                                font-weight: bold;
+                                padding: 5px;
+                            }
+                        }
+
+                        .final-deadline {
+                            .final-deadline-1 {
+                                margin-right: 10px;
+                                font-weight: bold;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .search {
+                .search-panel {
+                    width: 300px;
+                }
+            }
+        }
+    }
+}
+
+
+/* Mobile */
+@media screen and (max-width:740px) {
+    body {
+        .body-content {
+            padding: 20px;
+
+            .magazine-1 {
+                grid-template-columns: repeat(1, 1fr);
+
+                .magazine-content {
+                    .title {
+                        font-size: 23px;
+                    }
+
+                    .content {
+                        font-size: 17px;
+                    }
+
+                    .time {
+                        font-size: 17px;
+
+                        .deadline {
+                            .deadline-1 {
+                                margin-right: 10px;
+                                font-weight: bold;
+                            }
+                        }
+
+                        .final-deadline {
+                            .final-deadline-1 {
+                                margin-right: 10px;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+            .search {
+                .search-panel {
+
+                    width: 200px;
+                }
+            }
+        }
+    }
+}
