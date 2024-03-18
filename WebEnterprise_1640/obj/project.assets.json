@@ -11554,23 +11554,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\VNT\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\NTKhoa\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VNT\\Desktop\\làm bài thi\\COMP1640\\WebEnterprise_1640\\WebEnterprise_1640.csproj",
+      "projectUniqueName": "C:\\Users\\NTKhoa\\Desktop\\bai 1640\\COMP1640\\WebEnterprise_1640\\WebEnterprise_1640.csproj",
       "projectName": "WebEnterprise_1640",
-      "projectPath": "C:\\Users\\VNT\\Desktop\\làm bài thi\\COMP1640\\WebEnterprise_1640\\WebEnterprise_1640.csproj",
-      "packagesPath": "C:\\Users\\VNT\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VNT\\Desktop\\làm bài thi\\COMP1640\\WebEnterprise_1640\\obj\\",
+      "projectPath": "C:\\Users\\NTKhoa\\Desktop\\bai 1640\\COMP1640\\WebEnterprise_1640\\WebEnterprise_1640.csproj",
+      "packagesPath": "C:\\Users\\NTKhoa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\NTKhoa\\Desktop\\bai 1640\\COMP1640\\WebEnterprise_1640\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\VNT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\NTKhoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -11590,6 +11591,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -11646,7 +11652,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
       }
     }
   }

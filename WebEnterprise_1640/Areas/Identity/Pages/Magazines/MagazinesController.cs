@@ -15,6 +15,7 @@ namespace WebEnterprise_1640.Areas.Identity.Pages.Magazines
         {
             _context = context;
         }
+        // 1 vào magazin để lấy thông tin bài báo 
         [Route("[controller]")]
         public IActionResult Index(search search)
         {

@@ -169,7 +169,7 @@
 }
 
 .content {
-    width: 204px;
+    width: 220px;
 }
 
 .tech-terrain-navigating {
@@ -204,6 +204,7 @@
 }
 
 .content1 {
+    margin-left: 10px;
     width: 204px;
     align-items: flex-start;
     color: #000;
@@ -292,7 +293,7 @@
 
 .card1,
 .row1 {
-    align-items: center;
+
 }
 
 .card1 {
@@ -1704,3 +1705,5 @@
         flex-wrap: wrap;
     }
 }
+
+

@@ -29,22 +29,24 @@ namespace WebEnterprise_1640.Areas.Identity.Pages.ArticleModel
         {
             return View();
         }
+        //2 chạy vào getbyid hàm này là để chọn bài báo mà mình sẽ nộp       public ArticleModelController(ApplicationDbContext context)
+
         [Route("[controller]/[action]")]
         public IActionResult GetbyId(int id)
-        {
+        {     //Lấy thông tin từ cơ sở dữ liệu của magazin và điều chỉnh lại thời gian thành kiểu chuỗi để in ra dữ liệu
             var magazines = _context.Magazines.FirstOrDefault(x => x.Id == id);
             var timeEnd = _context.Semesters.FirstOrDefault(x => x.Id == magazines.SemesterId);
             ViewBag.Magazines = magazines;
             ViewBag.TimeStart = magazines.ClosureDate.ToString("yyyy/MM/dd");
             ViewBag.TimeEnd = timeEnd.FinalClosureDate.ToString("yyyy/MM/dd");
             var daynow = DateTime.UtcNow.Date;
-
             int year = int.Parse(ViewBag.TimeEnd.Split("/")[0]);
             var month = int.Parse(ViewBag.TimeEnd.Split("/")[1]);
             var day = int.Parse(ViewBag.TimeEnd.Split("/")[2]);
             DateTime dayEnd = new DateTime(year, month, day);
             ViewBag.Deadline = DateTime.Compare(daynow, dayEnd);
-
+            //kiểm tra xem có bài báo nào đã được nộp
+            //nếu đã nộp thì sẽ chạy sang trang đã submit
             var check = _context.Articles.FirstOrDefault(x => x.MagazineId == magazines.Id);
             if(check!= null && check.Status == "Submit")
             {
@@ -60,6 +62,7 @@ namespace WebEnterprise_1640.Areas.Identity.Pages.ArticleModel
                 map.TimeSubmit = check.SubmitDate.ToString("yyyy/MM/dd HH:mm");
                 return RedirectToAction("SubmitArticle","ArticleModel", map);
             }
+            //nếu chưa sẽ chạy sang view tạo mới bài viết CreateArtice
             else
             {
                 return View();
@@ -98,7 +101,7 @@ namespace WebEnterprise_1640.Areas.Identity.Pages.ArticleModel
             var formfile = await Request.ReadFormAsync();
             input.UserId = "1";
             input.Status = "Submit";
-            input.SubmitDate = new DateTime();
+            input.SubmitDate = DateTime.UtcNow.Date;
             _context.Articles.Add(input);
             await _context.SaveChangesAsync();
             var lastArticle = _context.Articles.ToList().Last();
@@ -107,7 +110,7 @@ namespace WebEnterprise_1640.Areas.Identity.Pages.ArticleModel
             document.ArticleId = lastArticle.Id;
             _context.Documents.Add(document);
             await _context.SaveChangesAsync();
-            return RedirectToAction("SubmitArticle", "ArticleModel", input);
+            return RedirectToAction("Index", "Magazines");
         }
         [Route("[controller]/[action]")]
         public IActionResult SubmitArticle(ArticleViewModel input)
