@@ -671,11 +671,13 @@
                         color: #000;
                         text-align: left;
                       ">
-                                <input style="color:black" name="file" type="file" />
+                                <input id="inputfiledoc" onchange="validateFile(event)" style="color:black" name="file" type="file" />
                             </div>
                         </div>
                     </div>
                 </div>
+
+
                 <h2 style="
                   margin: 0;
                   align-self: stretch;
@@ -734,11 +736,13 @@
                         color: #000;
                         text-align: left;
                       ">
-                                <input style="color:black" name="file" type="file" />
+                                <input id="inputfileimg" onchange="validateImg(event)" style="color:black" name="file" type="file" />
                             </div>
                         </div>
                     </div>
                 </div>
+
+         
 
             </div>
             <div style="
@@ -1258,5 +1262,25 @@
             document.getElementById("btnSubmit").style.display = "none";
         }
 
+    }
+    function validateImg(event) { 
+        console.log(event.target.files[0].type)
+        // id = "inputFile" onchange = "validateFile(event)"
+        var file = event.target.files[0].type;
+        if (file == "image/png" || file == "image/jpeg") {
+            return
+        }
+        else {
+            document.getElementById("inputfileimg").value = null;
+            alert("Chỉ Được Chọn File Hình Có Đuôi png,jpeg");
+        }
+    }
+    function validateFile(event) {
+        console.log(event)
+        var file = event.target.files[0].type;
+        if (file != "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
+            document.getElementById("inputfiledoc").value = null;
+            alert("Chỉ Được Chọn File Doc");
+        }
     }
 </script>

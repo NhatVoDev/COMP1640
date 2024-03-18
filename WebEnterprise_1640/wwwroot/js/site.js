@@ -15,7 +15,16 @@ document.getElementById("btnUpfile").addEventListener("click", function () {
 });
 
 function loadNameFile(event) {
-    document.getElementById("viewFileName").innerHTML = event.target.files[0].name
+    var file = event.target.files[0].type;
+    var file = event.target.files[0].type;
+    if (file == "application/vnd.openxmlformats-officedocument.wordprocessingml.document") {
+        document.getElementById("viewFileName").innerHTML = event.target.files[0].name
+    }
+    else {
+        document.getElementById("inputFile").value = null;
+        alert("Chỉ Được Chọn File Doc");
+    }
+
 }
 document.getElementById("deleteFile").addEventListener("click", function () {
     var input = document.getElementById("inputFile");
@@ -28,9 +37,15 @@ document.getElementById("btnImgfile").addEventListener("click", function () {
 });
 
 function loadImgFile(event) {
-    document.getElementById("viewImgName").innerHTML = event.target.files[0].name
+    var file = event.target.files[0].type;
+    if (file == "image/png" || file == "image/jpeg") {
+        document.getElementById("viewImgName").innerHTML = event.target.files[0].name
+    }
+    else {
+        document.getElementById("inputImg").value = null;
+        alert("Chỉ Được Chọn File Hình Có Đuôi png,jpeg");  
+    }
 }
-
 document.getElementById("deleteImg").addEventListener("click", function () {
     var input = document.getElementById("inputImg");
     input.value = null;

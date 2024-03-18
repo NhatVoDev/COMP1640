@@ -29,7 +29,7 @@
     }
  </style>
 <body>
-    <div class="student-magazine">
+    @* <div class="student-magazine">
         <div class="navbar-3">
             <div class="container">
                 <div class="ddsgnr-library">
@@ -241,7 +241,128 @@
             </div>
 
 
-</body>
+
+        
+        
+        
+         *@
+
+
+    <div class="body-content">
+
+         <form style="display:contents" asp-controller="Magazines" asp-action="Index" class="form-horizontal row-border" method="post" enctype="multipart/form-data">
+        <div class="search">
+            <div class="search-panel">
+                <div class="icon">
+                        <i style="" class="fa fa-search" aria-hidden="true"></i> <input asp-for="searchKey" name="searchKey" style="height:50px" class="search">
+                </div>
+            </div>
+        </div>
+        </form>
+        <div class="magazine-title">
+            <div class="lastest">
+                Latest Magazines
+            </div>
+        </div>
+        <div class="magazine-1">
+            @* view 1 *@
+               @foreach (var item in ViewBag.Manazines)
+                {
+                    <a style="display:contents ; color:unset" href="@Url.Action("GetbyId","ArticleModel", new {id = @item.Id})">
+
+                    <div class="magazine-content">
+                        <div class="title">
+                            @item.Name
+                        </div>
+                        <div class="content">
+                            @item.Description
+                        </div>
+                        <div class="time">
+                            <div class="deadline">
+                                <li class="deadline-1">
+                                    Deadline to submit:
+                                </li>
+                                <div class="deadline-2">
+                                    Mar-15-2024 11:00 AM
+                                </div>
+                            </div>
+                            <div class="final-deadline">
+                                <li class="final-deadline-1">
+                                    Final deadline:
+                                </li>
+                                <div class="final-deadline-2">
+                                    @foreach (var day in ViewBag.Semeter)
+                                    {
+                                        if (item.SemesterId == day.Id)
+                                        {
+                                           
+                                            <span>@day.FinalClosureDate</span>
+                                        }
+
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                }
+            @* end *@
+
+        </div>
+        <div class="magazine-title">
+            <div class="lastest">
+                Magazines have been closed
+            </div>
+        </div>
+        <div class="magazine-1">
+               @foreach (var item2 in ViewBag.Manazine2)
+            {
+                <a style="display:contents ; color:unset" href="@Url.Action("GetbyId","ArticleModel", new {id = @item2.Id})">
+
+                    <div class="magazine-content">
+                        <div class="title">
+                            @item2.Name
+                        </div>
+                        <div class="content">
+                            @item2.Description
+                        </div>
+                        <div class="time">
+                            <div class="deadline">
+                                <li class="deadline-1">
+                                    Deadline to submit:
+                                </li>
+                                <div class="deadline-2">
+                                    Mar-15-2024 11:00 AM
+                                </div>
+                            </div>
+                            <div class="final-deadline">
+                                <li class="final-deadline-1">
+                                    Final deadline:
+                                </li>
+                                <div class="final-deadline-2">
+                                    @foreach (var day in ViewBag.Semeter)
+                                    {
+                                        if (item2.SemesterId == day.Id)
+                                        {
+                                           
+                                            <span>@day.FinalClosureDate</span>
+                                        }
+
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </a>
+
+            }
+           
+
+           
+        </div>
+    </div>
+     </body>
 
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
