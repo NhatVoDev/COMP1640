@@ -11554,24 +11554,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NTKhoa\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Microsoft\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NTKhoa\\Desktop\\bai 1640\\COMP1640\\WebEnterprise_1640\\WebEnterprise_1640.csproj",
+      "projectUniqueName": "C:\\Users\\Microsoft\\Desktop\\New folder\\COMP1640\\WebEnterprise_1640\\WebEnterprise_1640.csproj",
       "projectName": "WebEnterprise_1640",
-      "projectPath": "C:\\Users\\NTKhoa\\Desktop\\bai 1640\\COMP1640\\WebEnterprise_1640\\WebEnterprise_1640.csproj",
-      "packagesPath": "C:\\Users\\NTKhoa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NTKhoa\\Desktop\\bai 1640\\COMP1640\\WebEnterprise_1640\\obj\\",
+      "projectPath": "C:\\Users\\Microsoft\\Desktop\\New folder\\COMP1640\\WebEnterprise_1640\\WebEnterprise_1640.csproj",
+      "packagesPath": "C:\\Users\\Microsoft\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Microsoft\\Desktop\\New folder\\COMP1640\\WebEnterprise_1640\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\NTKhoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Microsoft\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./magazine_submited.css">
+    <link rel="stylesheet" href="./comp1640.css">
+</head>
+
+<body>
+    <header>
+        <div class="nav-bar">
+            <div class="nav-1">
+                <p>BEE MAGAZINE
+                <p>
+            </div>
+            <div class="home an" id="home">
+                <div class="home-cover">
+                    <button class="home-button">Home</button>
+                </div>
+            </div>
+            <div class="button an" id="login">
+                <button class="login-button">Log in</button>
+            </div>
+            <div onclick="showmenu()" class="icon-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="show-menu none">
+
+        </div>
+    </header>
+    <div class="body-content">
+        <div class="article">
+            <div class="article-1">
+                <div class="arti-1">
+                    Aritcle title:
+                </div>
+                <div class="arti-1">
+                    Aritcle description:
+                </div>
+                <div class="arti-1">
+                    Date submitted:
+                </div>
+                <div class="arti-1">
+                    Final deadline:
+                </div>
+            </div>
+            <div class="article-2">
+                <div class="arti-2">
+                    Tech Terrain: Navigating the Digital Landscape
+                </div>
+                <div class="arti-2">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.
+                </div>
+                <div class="arti-2">
+                    Mar-15-2024 11:00 AM
+                </div>
+                <div class="arti-2">
+                    May-10-2024 11:59 PM
+                </div>
+            </div>
+        </div>
+        <div class="file">
+            <div class="file-1">
+                <div class="cle-1">
+                    Status:
+                </div>
+                <div class="cle-1">
+                    File submissions:
+                </div>
+                <div class="cle-1">
+                    Image File:
+                </div>
+            </div>
+            <div class="file-2">
+                <div class="cle-2">
+                    Submitted
+                </div>
+                <div class="cle-3">
+                    <div class="inf">
+                        <div class="sub-1">
+                            ---
+                        </div>
+                        <div class="sub-1">
+                            <i class="fa-regular fa-file-lines"></i>
+                        </div>
+                        <div class="sub-1">
+                            COMP1640_TechTerrrain:NavigatingtheDigitalLandscape_Draft.doc
+                        </div>
+                    </div>
+                </div>
+                <div class="cle-3">
+                    <div class="inf">
+                        <div class="sub-1">
+                            ---
+                        </div>
+                        <div class="sub-1">
+                            <i class="fa-solid fa-file-image"></i>
+                        </div>
+                        <div class="sub-1">
+                            LandingPictureforTechTerrrain.png
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="submit-button">
+            <button class="edit">
+                Edit Submission
+            </button>
+            <button class="remove">
+                Remove Submission
+            </button>
+        </div>
+        <h2>Feedback, comment</h2>
+        <div class="feedback">
+            <div class="person">
+                <div class="avatar">
+                    <div class="img">
+                        <img src="https://png.pngtree.com/element_our/png/20181022/man-avatar-icon-professional-man-character-business-man-avatar-carton-symbol-png_206531.jpg"
+                            alt="">
+                    </div>
+                </div>
+                <div class="name">
+                    Ed Sheeran
+                </div>
+            </div>
+            <div class="feedback-content">
+                <h4>Good point:</h4>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laboru</li>
+                <h4>Need to improve:</h4>
+                <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                ex ea commodo consequat.</li>
+            </div>
+            <div class="time-comment">
+                <div class="icon-time-comment">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </div>
+                <div class="time-comment-content">
+                    1 hour ago
+                </div>
+            </div>
+        </div>
+        <h2>Add a comment</h2>
+        <div class="add">
+            <input type="text" class="add-comment"><br>
+            <div class="icon-add">
+                <i class="fa-regular fa-paper-plane"></i>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="colum">
+            <div class="colum-1">
+                <h2>COMP1640</h2>
+            </div>
+            <div class="colum-2">
+                <h3>About us</h3>
+                <div class="contact">
+                    <p>Popular</p>
+                    <p>Trending</p>
+                    <p>Contact</p>
+                    <p>Support/Help</p>
+                    <p>Request Topics</p>
+                </div>
+            </div>
+            <div class="colum-3">
+                <h3>Follow us</h3>
+                <div class="social">
+                    <div class="facebook">
+                        <div class="icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                        <p>Facebook</p>
+                    </div>
+                    <div class="facebook">
+                        <div class="icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <p>Instagram</p>
+                    </div>
+                    <div class="facebook">
+                        <div class="icon">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <p>Twitter</p>
+                    </div>
+                    <div class="facebook">
+                        <div class="icon">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <p>LinkedIn</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copy-right">
+            <div class="year">
+                2024 COMP1640. All right reserved.
+            </div>
+            <div class="policy">
+                <u>Privacy Policy</u>
+                <u>Term of Service</u>
+                <u>Cookies Settings</u>
+            </div>
+        </div>
+    </footer>
+    <script src="./menu.js"></script>
+</body>
+
+</html>
